@@ -1,8 +1,8 @@
 "use strict";
 
 function createDataBase() {
-  const DB_KEY = "contact_book";
-  const OBJECT_KEYS = ["firstName", "lastName", "phone"];
+  const DB_KEY = "products";
+  const OBJECT_KEYS = ["itemName", "itemPrice", "itemDescription"];
 
   const validateObject = (objectToValidate) => {
     if (typeof objectToValidate !== "object") return false;
@@ -31,7 +31,7 @@ function createDataBase() {
     if (!validateObject(data)) return null;
 
     // Get data from localStorage
-    const currentData = getData();
+    const currentData = getData(); //[]
 
     //Calc id
     let id = 1;
@@ -53,15 +53,15 @@ function createDataBase() {
     const currentData = getData();
 
     const userIndex = currentData.findIndex(
-      (singleUser) => id === singleUser.id,
+      (singleProduct) => id === singleProduct.id,
     );
 
     if (userIndex === -1) return null;
 
-    const removeContact = currentData.splice(userIndex, 1)[0];
+    const removeItem = currentData.splice(userIndex, 1)[0];
     localStorage.setItem(DB_KEY, JSON.stringify(currentData));
 
-    return removeContact;
+    return removeItem;
   };
 
   return {
