@@ -64,10 +64,16 @@ function createDataBase() {
     return removeItem;
   };
 
+  // Get product id for editing
+  const getID = (id) => {
+    localStorage.setItem(`selectedProductID`, id);
+  };
+
   return {
     getData,
     setData,
     deleteData,
+    getID,
   };
 }
 

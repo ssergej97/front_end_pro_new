@@ -13,7 +13,7 @@ function createUI() {
         <td>$${itemPrice}</td>
         <td>${itemDescription}</td>
         <td>
-            <button type="submit" class="btn btn-primary me-2" >Edit</button>
+            <button type="submit" class="btn btn-primary me-2" data-btn="edit">Edit</button>
             <button type="submit" class="btn btn-danger" data-delete>Delete</button>
         </td>
     `.trim();

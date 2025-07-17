@@ -1,7 +1,7 @@
 "use strict";
 
 function createController() {
-  // Render elements in contacts list(view.list)
+  // Render elements in product list(view.list)
   document.addEventListener("DOMContentLoaded", () => {
     const items = dataBase.getData();
     items.forEach((item) => {
@@ -10,12 +10,12 @@ function createController() {
     });
   });
   // Handle form event
-  const form = document.querySelector("[data-form]");
-
+  // const form = document.querySelector("[data-form]");
+  //
   // const submitBtn = form.querySelector("[data-btn]");
   // submitBtn.setAttribute("disabled", "disabled");
   // submitBtn.disabled = true;
-
+  //
   // const inputs = Array.from(form.querySelectorAll("input, textarea"));
   // console.log(inputs);
   // form.addEventListener("submit", (e) => {
@@ -60,11 +60,13 @@ function createController() {
   };
   // form.addEventListener("input", disabledHandler);
 
-  // Delete contact
+  // Delete product
   const deleteContactHandler = ({ target }) => {
     // if (target.closest("[data-remove-contact]") === null) return;
+    const btnToDelete = document.querySelector("[data-delete]");
+    if (target !== btnToDelete) return;
     const itemElement = target.closest("[data-user-id]");
-    console.log(itemElement);
+    // console.log(itemElement);
     const userID = Number(itemElement.getAttribute("data-user-id"));
     const removedElement = dataBase.deleteData(userID);
     if (removedElement !== null) {
@@ -72,8 +74,19 @@ function createController() {
     }
   };
   const itemList = document.querySelector("tbody");
-  console.log(itemList);
+  // console.log(itemList);
   itemList.addEventListener("click", deleteContactHandler);
+
+  // Edit product
+  // Redirect to edit form
+  itemList.addEventListener("click", ({ target }) => {
+    if (target.dataset.btn !== "edit") return;
+    // console.log(target);
+    const productID = target.closest("tr").dataset.userId;
+    // console.log(typeof productID);
+    dataBase.getID(productID);
+    window.location.href = "edit.html";
+  });
 }
 
 createController();
