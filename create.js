@@ -1,16 +1,8 @@
 "use strict";
 
-// Render product id for editing
-const renderID = () => {
-  const productID = localStorage.getItem("selectedProductID");
-  const heading = document.querySelector("h2");
-  heading.innerHTML = `Edit product #${productID}`;
-};
+// Handle form event
 
-renderID();
-
-// Handle data for editing
-const handleData = () => {
+const collectData = () => {
   const form = document.querySelector("[data-form]");
 
   const submitBtn = form.querySelector("[data-btn]");
@@ -32,12 +24,12 @@ const handleData = () => {
     console.log(data);
     target.reset();
 
-    dataBase.editProduct(data);
-    // Redirect to list
-    // const template = ui.createTemplate(savedItem);
-    // ui.renderContact(template);
+    const savedItem = dataBase.setData(data);
+    const template = ui.createTemplate(savedItem);
+    ui.renderContact(template);
   });
 
+  // Redirect to list
   submitBtn.addEventListener("click", (e) => {
     window.location.href = "list.html";
   });
@@ -62,4 +54,4 @@ const handleData = () => {
   form.addEventListener("input", disabledHandler);
 };
 
-handleData();
+collectData();

@@ -69,11 +69,29 @@ function createDataBase() {
     localStorage.setItem(`selectedProductID`, id);
   };
 
+  // Edit product
+  const editProduct = (data) => {
+    const productID = localStorage.getItem("selectedProductID");
+    console.log(typeof productID, productID);
+    const productsInLocalStorage = JSON.parse(localStorage.getItem("products"));
+    console.log(typeof productsInLocalStorage, productsInLocalStorage);
+    for (let i = 0; i < productsInLocalStorage.length; i++) {
+      if (productsInLocalStorage[i].id === +productID) {
+        productsInLocalStorage[i].itemName = data.itemName;
+        productsInLocalStorage[i].itemPrice = data.itemPrice;
+        productsInLocalStorage[i].itemDescription = data.itemDescription;
+      }
+    }
+    console.log(productsInLocalStorage);
+    localStorage.setItem("products", JSON.stringify(productsInLocalStorage));
+  };
+
   return {
     getData,
     setData,
     deleteData,
     getID,
+    editProduct,
   };
 }
 
