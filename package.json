@@ -2,7 +2,7 @@
   "name": "front_end_pro_new",
   "version": "1.0.0",
   "description": "",
-  "main": "js/index.js",
+  "main": "js/model.js",
   "scripts": {
     "test": "test",
     "lint": "eslint .",
