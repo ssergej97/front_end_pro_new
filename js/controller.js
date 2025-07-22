@@ -29,7 +29,7 @@ function createController() {
   const categories = document.querySelector("[data-categories]");
   categories.addEventListener("click", (e) => {
     const { target } = e;
-    console.log(target);
+    // console.log(target);
     // console.dir(target);
     if (target.dataset.subcategory !== "add") return null;
     const category = target.closest("li");
@@ -38,12 +38,25 @@ function createController() {
     // console.log(categoryId);
     const userSubcategory = prompt("Enter a subcategory:");
     const userData = [userSubcategory];
-    console.log(userData);
+    // console.log(userData);
     const dataSubcategory = dataBase.createSubcategory(userData, categoryId);
-    console.log(dataSubcategory);
+    // console.log(dataSubcategory);
     const createSubCategoryTemplate =
       ui.templateForSubcategory(dataSubcategory);
     ui.renderSubcategory(createSubCategoryTemplate);
+  });
+
+  // Show subcategories
+  categories.addEventListener("click", (e) => {
+    const { target } = e;
+    if (target.dataset.show !== "show") return null;
+    const subcategories = document.querySelector("[data-subcategory]");
+    console.log(subcategories);
+    if (subcategories.hasAttribute("style"))
+      subcategories.removeAttribute("style");
+    else if (!subcategories.hasAttribute("style")) {
+      subcategories.setAttribute("style", "display: none");
+    }
   });
 }
 

@@ -44,7 +44,7 @@
 .category-wrapper ul li {
     display: flex;
     gap: 20px;
-    align-items: flex-start;
+    align-items: baseline;
 }
 
 .category-wrapper ul li {

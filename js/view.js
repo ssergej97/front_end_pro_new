@@ -6,12 +6,14 @@ function createUi() {
     const wrapper = document.createElement("li");
     wrapper.setAttribute("data-category-id", id);
     const content = `
-        <h2>${userCategory}</h2>
-        <ul data-subcategory>
-<!--            <li>Washing machines</li>-->
-<!--            <li>Dishwashers</li>-->
-<!--            <li>Fridges</li>-->
-        </ul>
+        <div><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3 .org/2000/svg" data-show="show">
+            <path d="M10.6663 1.66669L5.99967 6.33335L1.33301 1.66669" stroke="#3D3D3D" stroke-width="1.5"  stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div>
+            <h2>${userCategory}</h2>
+            <ul data-subcategory></ul>
+        </div>
         <button class="add-btn-subcategory" data-subcategory="add">Add a subcategory</button>
         <button class="edit-btn">Edit</button>
         <button class="delete-btn">Delete</button>
