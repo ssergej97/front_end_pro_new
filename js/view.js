@@ -20,7 +20,6 @@ function createUi() {
     `.trim();
 
     wrapper.innerHTML = content;
-    // console.log(wrapper);
 
     return wrapper;
   };
