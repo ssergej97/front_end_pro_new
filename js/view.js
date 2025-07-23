@@ -15,8 +15,8 @@ function createUi() {
             <ul data-subcategory></ul>
         </div>
         <button class="add-btn-subcategory" data-subcategory="add">Add a subcategory</button>
-        <button class="edit-btn">Edit</button>
-        <button class="delete-btn">Delete</button>
+        <button class="edit-btn" data-subcategory="edit">Edit</button>
+        <button class="delete-btn" data-subcategory="delete">Delete</button>
     `.trim();
 
     wrapper.innerHTML = content;
@@ -37,9 +37,21 @@ function createUi() {
     return subcategory;
   };
 
-  const renderSubcategory = (template) => {
-    const subCategories = document.querySelector("[data-subcategory]");
+  const renderSubcategory = (template, id) => {
+    const subCategories = document.querySelector(
+      `[data-category-id='${id}'] [data-subcategory]`,
+    ); //
     subCategories.append(template);
+  };
+
+  const renderNewCategory = (data, id) => {
+    const category = document.querySelector(`[data-category-id='${id}'] h2`);
+    category.innerHTML = `${data}`;
+  };
+
+  const deleteCategory = (id) => {
+    const category = document.querySelector(`[data-category-id='${id}']`);
+    category.remove();
   };
 
   return {
@@ -47,6 +59,8 @@ function createUi() {
     renderCategory,
     templateForSubcategory,
     renderSubcategory,
+    renderNewCategory,
+    deleteCategory,
   };
 }
 
