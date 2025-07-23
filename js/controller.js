@@ -99,11 +99,16 @@ function createController() {
   categories.addEventListener("click", (e) => {
     const { target } = e;
     if (target.dataset.subcategory !== "delete") return null;
-    const category = target.closest("li");
-    console.log(category);
-    const categoryId = Number(category.getAttribute("data-category-id"));
-    dataBase.deleteCategory(categoryId);
-    ui.deleteCategory(categoryId);
+    const userConfirm = confirm(
+      "Are you sure you want to delete the category?",
+    );
+    if (userConfirm) {
+      const category = target.closest("li");
+      console.log(category);
+      const categoryId = Number(category.getAttribute("data-category-id"));
+      dataBase.deleteCategory(categoryId);
+      ui.deleteCategory(categoryId);
+    } else return;
   });
 }
 
