@@ -1,100 +1,63 @@
 "use strict";
 
 function createController() {
-  // Render category list
+  // Render elements in task list
   document.addEventListener("DOMContentLoaded", () => {
-    const categories = dataBase.getData();
-    categories.forEach((category) => {
-      console.log(category);
-      const template = ui.createTemplate(category);
-      ui.renderCategory(template);
+    const tasks = dataBase.getData();
+    tasks.forEach((task) => {
+      const template = ui.createTemplate(task);
+      ui.renderTask(template);
     });
   });
 
-  // Render subcategory list
-  document.addEventListener("DOMContentLoaded", () => {
-    const categories = dataBase.getData();
-    categories.forEach((category) => {
-      const values = Object.values(category);
-      const subCategories = values[2];
-      const subCategoriesId = values[1];
-      console.log(subCategories);
-      for (let i = 0; i < subCategories.length; i++) {
-        const subcategoryTemplate = ui.templateForSubcategory(subCategories[i]);
-        ui.renderSubcategory(subcategoryTemplate, subCategoriesId);
+  // Handle form event
+  const form = document.querySelector("[data-form]");
+
+  const submitBtn = form.querySelector('[type="submit"]');
+  submitBtn.setAttribute("disabled", "disabled");
+  submitBtn.disabled = true;
+
+  const inputs = Array.from(form.querySelectorAll("input, textarea"));
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const { target } = e;
+
+    // Get data from the form
+    const data = inputs.reduce((acc, { name, value }) => {
+      acc[name] = value;
+      return acc;
+    }, {});
+
+    target.reset();
+
+    console.log(data);
+    const savedTask = dataBase.setData(data);
+    console.log(savedTask);
+    const template = ui.createTemplate(savedTask);
+    ui.renderTask(template);
+    dataBase.findTaskOnId(2);
+  });
+
+  const disabledHandler = (e) => {
+    let isInputFilled = true;
+    for (let i = 0; i < inputs.length; i++) {
+      if (!inputs[i].value.trim().length) {
+        isInputFilled = false;
+        break;
       }
-    });
-  });
-
-  // Add a category
-  const addBtn = document.querySelector(".add-btn-category");
-  addBtn.addEventListener("click", (e) => {
-    const { target } = e;
-    const userCategory = prompt("Enter a category:");
-    const userData = { userCategory };
-    dataBase.setData(userData);
-    if (userCategory === null) return null;
-    const dataCategory = dataBase.getData().at(-1);
-    const createCategoryTemplate = ui.createTemplate(dataCategory);
-    ui.renderCategory(createCategoryTemplate);
-  });
-
-  // Add a subcategory
-  const categories = document.querySelector("[data-categories]");
-  categories.addEventListener("click", (e) => {
-    const { target } = e;
-    if (target.dataset.subcategory !== "add") return null;
-    const category = target.closest("li");
-    const categoryId = Number(category.getAttribute("data-category-id"));
-    const userSubcategory = prompt("Enter a subcategory:");
-    const userData = [userSubcategory];
-    const dataSubcategory = dataBase.createSubcategory(userData, categoryId);
-    const createSubCategoryTemplate =
-      ui.templateForSubcategory(dataSubcategory);
-    ui.renderSubcategory(createSubCategoryTemplate, categoryId);
-  });
-
-  // Show subcategories
-  categories.addEventListener("click", (e) => {
-    const { target } = e;
-    if (target.dataset.show !== "show") return null;
-    const category = target.closest("li");
-    const categoryId = Number(category.getAttribute("data-category-id"));
-    const subcategories = document.querySelector(
-      `[data-category-id='${categoryId}'] [data-subcategory]`,
-    );
-    if (subcategories.hasAttribute("style"))
-      subcategories.removeAttribute("style");
-    else if (!subcategories.hasAttribute("style")) {
-      subcategories.setAttribute("style", "display: none");
     }
-  });
 
-  // Edit subcategories
-  categories.addEventListener("click", (e) => {
-    const { target } = e;
-    if (target.dataset.subcategory !== "edit") return null;
-    const category = target.closest("li");
-    const categoryId = Number(category.getAttribute("data-category-id"));
-    const newCategory = prompt("Edit a category:");
-    dataBase.editCategory(newCategory, categoryId);
-    ui.renderNewCategory(newCategory, categoryId);
-  });
-
-  // Delete category
-  categories.addEventListener("click", (e) => {
-    const { target } = e;
-    if (target.dataset.subcategory !== "delete") return null;
-    const userConfirm = confirm(
-      "Are you sure you want to delete the category?",
-    );
-    if (userConfirm) {
-      const category = target.closest("li");
-      const categoryId = Number(category.getAttribute("data-category-id"));
-      dataBase.deleteCategory(categoryId);
-      ui.deleteCategory(categoryId);
-    } else return;
-  });
+    if (isInputFilled) {
+      submitBtn.removeAttribute("disabled");
+      submitBtn.disabled = false;
+    } else {
+      submitBtn.setAttribute("disabled", "disabled");
+      submitBtn.disabled = true;
+    }
+  };
+  form.addEventListener("input", disabledHandler);
 }
 
 createController();
