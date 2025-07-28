@@ -1,12 +1,17 @@
 "use strict";
 
 class Student {
+  name = null;
+  surname = null;
+  birthAge = null;
+  scores = null;
+  presence = [];
+
   constructor(name, surname, birthAge, scores) {
     this.name = name;
     this.surname = surname;
     this.birthAge = birthAge;
     this.scores = scores;
-    this.presence = [];
   }
 
   studentAge() {
@@ -47,7 +52,7 @@ class Student {
 }
 
 const newStudent = new Student("Sergey", "Subota", 1997, [10, 50]);
-
+console.log(newStudent);
 const studentAge = newStudent.studentAge();
 console.log(`Age: ${studentAge}`);
 const averageScoreOfStudent = newStudent.averageScore();
