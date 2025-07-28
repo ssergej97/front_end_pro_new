@@ -5,13 +5,14 @@ class Student {
   surname = null;
   birthAge = null;
   scores = null;
-  presence = [];
+  presence = null;
 
   constructor(name, surname, birthAge, scores) {
     this.name = name;
     this.surname = surname;
     this.birthAge = birthAge;
     this.scores = scores;
+    this.presence = [];
   }
 
   studentAge() {
