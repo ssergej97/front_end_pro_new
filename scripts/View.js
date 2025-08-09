@@ -2,20 +2,21 @@
 
 function Render() {}
 
-Render.prototype.renderTask = function ({ title, description }) {
+Render.prototype.renderTask = function ({ name, description, id }) {
   const wrapper = document.getElementById("todoItems");
   const col = document.createElement("div");
   col.classList.add("col-4");
   const task = `
                       
-                        <div class="taskWrapper">
-                          <div class="taskHeading">${title}</div>
+                        <div class="taskWrapper" >
+                          <div class="taskHeading">${name}</div>
                           <div class="taskDescription">${description}</div>
                           <hr />
                           <label class="completed form-check">
                             <input
                               type="checkbox"
                               class="form-check-input"
+                              data-id="${id}"
                             />
                             <span>Done</span>
                           </label>
