@@ -2,7 +2,7 @@
 
 function Controller() {}
 
-Controller.prototype.getData = function () {
+Controller.prototype.setData = function () {
   const data = {};
   const submitBtn = document.querySelector(".btn-primary");
   submitBtn.addEventListener("click", (e) => {
@@ -45,7 +45,30 @@ Controller.prototype.reloadPageRender = function () {
   });
 };
 
+Controller.prototype.deleteTask = function () {
+  const wrapper = document.getElementById("todoItems");
+  wrapper.addEventListener("click", (e) => {
+    if (e.target.hasAttribute("data-btn")) {
+      const itemId = e.target.getAttribute("data-id");
+      tasksList.deleteItem(itemId);
+      renderedTask.unrenderedTask(itemId);
+    }
+  });
+};
+
+Controller.prototype.deleteAllTasks = function () {
+  const deleteBtn = document.querySelector(".remove-all");
+  console.log(deleteBtn);
+  deleteBtn.addEventListener("click", (e) => {
+    renderedTask.unrenderedAllTask();
+    tasksList.deleteAllItems();
+  });
+};
+
 const newController = new Controller();
-newController.getData();
+
+newController.setData();
 newController.editStatus();
 newController.reloadPageRender();
+newController.deleteTask();
+newController.deleteAllTasks();
