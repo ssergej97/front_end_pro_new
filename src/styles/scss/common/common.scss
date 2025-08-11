@@ -1,0 +1,14 @@
+@use "sass:map";
+
+body {
+  font-family: $secondary-font-family;
+  font-size: map.get($font-sizes, "md");
+  color: map.get($colors, "main-font-color");
+}
+
+.container {
+  max-width: map.get($content-widths, "xl");
+  margin: 0 auto;
+  padding: 0 15px;
+}
+

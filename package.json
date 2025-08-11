@@ -1,39 +1,15 @@
 {
-  "name": "front_end_pro_new",
+  "name": "freebie",
   "version": "1.0.0",
-  "description": "",
-  "main": "scripts/Model.js",
-  "scripts": {
-    "test": "test",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ssergej97/front_end_pro_new.git"
-  },
-  "keywords": [
-    "hello",
-    "world"
-  ],
-  "author": "Sergey",
+  "description": "Вам необхідно взявши за основу файли з урока - todo list, написати свою реалізацію туду ліста.",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ssergej97/front_end_pro_new/issues"
+  "author": "",
+  "type": "commonjs",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/ssergej97/front_end_pro_new#readme",
   "dependencies": {
-    "eslint-config-airbnb": "^19.0.4",
-    "lodash": "^4.17.21"
-  },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.28.0",
-    "eslint": "^8.57.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-react": "^7.37.5",
-    "globals": "^16.2.0",
-    "prettier": "3.5.3"
+    "bootstrap-icons": "^1.13.1"
   }
 }

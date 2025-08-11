@@ -1,0 +1,40 @@
+$main-font-family: 'Roboto', 'Quicksand', sans-serif;
+$secondary-font-family: 'Quicksand', 'Roboto', sans-serif;
+$base-font-path: './../../fonts/';
+
+$font-sizes: (
+  "xl": 36px,
+  "lg": 18px,
+  "md": 15px,
+  "sm": 13px,
+  "xs": 11px,
+);
+
+$colors: (
+  "accent-color": #5E81FE,
+  "light-blue": #D2E1FF,
+  "dark-blue": #6888FF,
+  "headers-color": #3D4F95,
+  "main-font-color": #8D96BD,
+  "btn-primary-color": #3A79FF,
+  "btn-danger-color": #D43F3F,
+  "btn-danger-bg-color": #FFD7D7,
+  "btn-secondary-color": #ADB4D2,
+  "btn-icon-color": #FFF,
+  "btn-icon-bg-color": #4C85FF,
+  "btn-base-color": #A6B6DA,
+);
+
+$content-widths: (
+  "xl": 1200px,
+  "lg": 992px,
+  "md": 767px,
+  "sm": 577px,
+);
+
+$containers: (
+  "container": 1200px,
+  "container-lg": 840px,
+  "container-md": 767px,
+  "sm": 577px,
+)

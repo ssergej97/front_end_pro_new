@@ -1,0 +1,63 @@
+@use "sass:map";
+
+.btn {
+  $btn-shadow: 0 0 2px;
+  font-family: $main-font-family;
+  padding: 9px 11px;
+  margin: 0;
+  background-color: transparent;
+  border: 2px solid transparent;
+  text-decoration: none;
+  color: map.get($colors, "btn-base-color");
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: map.get($font-sizes, "sm");
+
+  &:focus, &:hover {
+    box-shadow: $btn-shadow map.get($colors, "btn-base-color");
+  }
+
+  &.btn-primary {
+    @include create-btn-styles(
+        map.get($colors, "light-blue"),
+        map.get($colors, "btn-primary-color"),
+        map.get($colors, "light-blue")
+    );
+  }
+
+  &.btn-danger {
+    @include create-btn-styles(
+        map.get($colors, "btn-danger-bg-color"),
+        map.get($colors, "btn-danger-color"),
+        map.get($colors, "btn-danger-bg-color")
+    );
+  }
+
+  &.btn-secondary {
+    @include create-btn-styles(
+        transparent,
+        map.get($colors, "btn-secondary-color"),
+        map.get($colors, "btn-secondary-color")
+    );
+  }
+
+  &.btn-icon {
+    @include create-btn-styles(
+        map.get($colors, "btn-icon-bg-color"),
+        map.get($colors, "btn-icon-color"),
+        map.get($colors, "btn-icon-bg-color")
+    );
+  }
+
+  &.btn-sm{
+    @include create-btn-sizes(7px 9px, map.get($font-sizes, "sm"));
+  };
+  &.btn-md{
+    @include create-btn-sizes(9px 11px, map.get($font-sizes, "md"));
+  };
+  &.btn-lg{
+    @include create-btn-sizes(11px 13px, map.get($font-sizes, "lg"));
+  };
+}

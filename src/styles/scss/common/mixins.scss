@@ -1,0 +1,20 @@
+@mixin create-btn-styles($bg, $font-color, $border-color, $box-shadow-dimension: 0 5px 7px -4px) {
+  @content;
+
+  background-color: $bg;
+  color: $font-color;
+  border-color: $border-color;
+
+  &:focus, &:hover {
+    @if $font-color == #fff {
+      box-shadow: $box-shadow-dimension $bg;
+    } @else {
+      box-shadow: $box-shadow-dimension $font-color;
+    }
+  }
+}
+
+@mixin create-btn-sizes($dimension, $font-size) {
+  padding: $dimension;
+  font-size: $font-size;
+}
