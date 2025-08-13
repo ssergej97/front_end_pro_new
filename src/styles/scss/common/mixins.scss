@@ -18,3 +18,13 @@
   padding: $dimension;
   font-size: $font-size;
 }
+
+@mixin flex-gap($gap: false, $is-flexible: true) {
+  @if $gap != false {
+    gap: $gap;
+  }
+
+  @if $is-flexible != false {
+    display: flex;
+  }
+}

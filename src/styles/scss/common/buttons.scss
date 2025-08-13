@@ -49,6 +49,12 @@
         map.get($colors, "btn-icon-color"),
         map.get($colors, "btn-icon-bg-color")
     );
+    &.rounded {
+      border-radius: 50px;
+      background-color: map.get($colors, "btn-icon-color");
+      color: map.get($colors, "accent-color");
+      border: none;
+    }
   }
 
   &.btn-sm{

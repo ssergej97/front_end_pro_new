@@ -1,8 +1,10 @@
 $main-font-family: 'Roboto', 'Quicksand', sans-serif;
 $secondary-font-family: 'Quicksand', 'Roboto', sans-serif;
 $base-font-path: './../../fonts/';
+$base-assets-path: './../../assets/';
 
 $font-sizes: (
+  "xxl": 48px,
   "xl": 36px,
   "lg": 18px,
   "md": 15px,
@@ -23,6 +25,8 @@ $colors: (
   "btn-icon-color": #FFF,
   "btn-icon-bg-color": #4C85FF,
   "btn-base-color": #A6B6DA,
+  "bordered-color": #D8E3FE,
+  "banner-bg": #f5f6ff,
 );
 
 $content-widths: (

@@ -1,27 +1,47 @@
-.header {
-  border-bottom: 1px solid black;
-  padding: 25px 0;
+@use "sass:map";
 
-  &__links {
-    display: flex;
+.header {
+  $logo-dimension: 26px;
+  padding: 21px 0;
+  max-height: 80px;
+
+  &__content {
+    @extend %flex-between;
     align-items: center;
-    justify-content: center;
-    list-style: none;
-    gap: 15px;
-    margin: 0;
   }
 
-  &__link {
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 24px;
-    border-bottom: 2px solid transparent;
-    transition: 0.3s;
+  &__start {
+    @extend %flex-between;
+    @include flex-gap(73px, false);
+    align-items: center;
+  }
+
+  &__logo a {
+    width: $logo-dimension;
+    height: $logo-dimension;
+    background-color: map.get($colors, "accent-color");
+    border-radius: 50%;
+    transition: 0.3s box-shadow;
 
     &:hover {
-      border-color: darkcyan;
+      box-shadow: 0 0 11px -3px map.get($colors, "accent-color");
     }
+  }
+
+  &__main-menu ul {
+    @extend %list-unstyled;
+    @include flex-gap(42px);
+    align-items: center;
+  }
+
+  &__end {
+    @extend %flex-between;
+    @include flex-gap(15px, false);
+    align-items: center;
+  }
+
+  &__socials ul {
+    @include flex-gap(35px);
+    font-size: map.get($font-sizes, "lg");
   }
 }

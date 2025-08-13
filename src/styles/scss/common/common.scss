@@ -6,9 +6,40 @@ body {
   color: map.get($colors, "main-font-color");
 }
 
-.container {
+.container, .container-sm, .container-md, .container-lg {
   max-width: map.get($content-widths, "xl");
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.container {
+  max-width: map.get($content-widths, "xl");
+}
+
+.container-sm {
+  max-width: map.get($content-widths, "sm");
+}
+
+.container-md {
+  max-width: map.get($content-widths, "md");
+}
+
+.container-lg {
+  max-width: map.get($content-widths, "lg");
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: map.get($colors, "main-font-color");
+  transition: 0.3s;
+
+  &:hover {
+    color: map.get($colors, "accent-color");
+  }
+}
+
+.bordered {
+  border-bottom: 2px solid map.get($colors, "bordered-color");
 }
 
