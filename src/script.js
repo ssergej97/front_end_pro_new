@@ -35,6 +35,7 @@ class Todo {
       items: this.getItemsFromLocalStorage(),
     }
     this.render()
+    this.bindEvents()
   }
 
   getItemsFromLocalStorage() {
@@ -66,8 +67,8 @@ class Todo {
 
     const items = this.state.items
 
-    this.listElement.innerHTML = items.map(({ id, title, isChecked}) => {
-      `<li
+    this.listElement.innerHTML = items.map(({ id, title, isChecked }) => `
+      <li
       class="todo__item todo-item"
       data-js-todo-item
     >
@@ -108,9 +109,8 @@ class Todo {
           />
         </svg>
       </button>
-    </li> 
-      `
-    }).join('')
+    </li>  
+    `).join('')
 
     const isEmptyItems = this.state.items.length === 0
 
@@ -146,6 +146,43 @@ class Todo {
     })
     this.saveItemsToLocalStorage()
     this.render()
+  }
+
+  onNewTaskFormSubmit = (event) => {
+    event.preventDefault()
+
+    const newTodoItemTitle = this.newTaskInputElement.value
+
+    if (newTodoItemTitle.trim().length > 0) {
+      this.addItem(newTodoItemTitle)
+      this.newTaskInputElement.value = '';
+      this.newTaskFormElement.focus()
+    }
+  }
+
+  onClick = ({ target }) => {
+    if (target.matches(this.selectors.itemDeleteButton)) {
+      const itemElement = target.closest(this.selectors.item)
+      const itemCheckBoxElement = itemElement.querySelector(this.selectors.itemCheckbox)
+
+      itemElement.classList.add(this.stateClasses.isDisappearing)
+
+      setTimeout(() => {
+        this.deleteItem(itemCheckBoxElement.id)
+      }, 400)
+    }
+  }
+
+  onChange = ({ target }) => {
+    if (target.matches(this.selectors.itemCheckbox)) {
+      this.toggleCheckedState(target.id)
+    }
+  }
+
+  bindEvents() {
+    this.newTaskFormElement.addEventListener('submit', this.onNewTaskFormSubmit)
+    this.listElement.addEventListener('click', this.onClick)
+    this.listElement.addEventListener('change', this.onChange)
   }
 }
 
