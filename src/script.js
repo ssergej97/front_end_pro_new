@@ -149,7 +149,7 @@ class Todo {
   }
 }
 
-const test = new Todo();
-console.log(test);
+new Todo();
+
 
 
