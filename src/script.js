@@ -49,12 +49,12 @@ function createBus() {
 // Після реалізації зніміть коментарі та виконайте сценарії нижче по черзі,
 // фіксуйте фактичний порядок логів у консолі.
 
-// const bus = createBus();
-//
-// bus.on('tick', (x) => console.log('tick:', x));
-//
-// bus.emit('tick', { step: 1 }, 0);
-// console.log('after schedule');
+const bus = createBus();
+
+bus.on('tick', (x) => console.log('tick:', x));
+
+bus.emit('tick', { step: 1 }, 0);
+console.log('after schedule');
 // Очікування: лог хендлера з’являється пізніше за "after schedule".
 
 // const bus = createBus();
@@ -70,7 +70,7 @@ function createBus() {
 // Завдання: зафіксувати послідовність появи step 1 та step 2
 // і пояснити, чому другий виклик приходить пізніше.
 
-// Тому що спочатку викликали функцію з step: 1, а потім вже зі step: 2
+// Тому що спочатку виконується по черзі функція з step: 1, а потім вже зі step: 2
 
 // const bus = createBus();
 //
@@ -83,13 +83,13 @@ function createBus() {
 // bus.emit('news', 'B', 0);
 // Завдання: перевірити, що 'B' більше не доходить до хендлера.
 
-const bus = createBus();
-
-bus.on('ev', (v) => console.log('h1', v));
-bus.on('ev', (v) => console.log('h2', v));
-bus.on('ev', (v) => console.log('h3', v));
-
-bus.emit('ev', 42, 0);
+// const bus = createBus();
+//
+// bus.on('ev', (v) => console.log('h1', v));
+// bus.on('ev', (v) => console.log('h2', v));
+// bus.on('ev', (v) => console.log('h3', v));
+//
+// bus.emit('ev', 42, 0);
 // Завдання: переконатися, що всі три обробники викликаються у межах одного емісу.
 
 
