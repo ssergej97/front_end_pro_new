@@ -55,3 +55,23 @@
   text-align: center;
   color: var(--color-grey-4);
 }
+
+.todo__form-filter {
+    position: relative;
+}
+
+.todo__field-filter {
+
+    &::after {
+        content: '';
+        background-image: url("./../../icons/arrow-down-short.svg");
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 8px;
+        right: 10px;
+    }
+}
+
+

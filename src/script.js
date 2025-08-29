@@ -240,19 +240,14 @@ class Todo {
   }
 
   filterOnChange = ( {target} ) => {
-    console.dir(target);
     if (target.dataset.jsFilterTaskInput === '') {
-      console.log('test');
-      const options = Array.from(target.children);
-      options.forEach((option) => {
-        if (option.value === 'all') {
-          // this.filterAllTasks();
-        } else if (option.value === 'active') {
-          this.filterActiveTasks();
-        } else if (option.value === 'completed') {
-          this.filterCompletedTasks();
-        }
-      })
+      if (target.value === 'all') {
+        this.filterAllTasks();
+      } else if (target.value === 'active') {
+        this.filterActiveTasks();
+      } else if (target.value === 'completed') {
+        this.filterCompletedTasks();
+      }
     }
   }
 
