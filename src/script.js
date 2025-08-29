@@ -1,95 +1,192 @@
-'use strict';
+class Todo {
+  selectors = {
+    root: "[data-js-todo]",
+    newTaskForm: "[data-js-todo-new-task-form]",
+    newTaskInput: "[data-js-todo-new-task-input]",
+    filterTaskForm: "[data-js-filter-task-form]",
+    filterTaskInput: "[data-js-filter-task-input]",
+    doneTasks: "[data-js-done-tasks]",
+    inProgressTasks: "[data-js-inProgress-tasks]",
+    list: "[data-js-todo-list]",
+    item: "[data-js-todo-item]",
+    itemCheckbox: "[data-js-todo-item-checkbox]",
+    itemLabel: "[data-js-todo-item-label]",
+    itemDeleteButton: "[data-js-todo-item-delete-button]",
+    emptyMessage: "[data-js-todo-empty-message]"
+  };
 
-// Event Bus (скелет): реалізуйте on/off/emit.
+  stateClasses = {
+    isDisappearing: "is-disappearing"
+  };
 
-// ВАЖЛИВО: emit має бути асинхронним (через setTimeout), навіть при delay=0.
+  localStorageKey = "todo-items";
 
-function createBus() {
-  const topics = Object.create(null) // { [topic]: Set<Function> }
-
-  function on(topic, handler) {
-    // TODO: 1) Ініціалізувати контейнер підписників для topic
-    //       2) Додати handler
-    //       3) Повернути функцію відписки
-    if (Object.keys(topics).length === 0) {
-      topics[topic] = new Set();
-      topics[topic].add(handler);
-    } else if (Object.keys(topics).length > 0) {
-      topics[topic].add(handler);
+  constructor() {
+    this.rootElement = document.querySelector(this.selectors.root)
+    this.newTaskFormElement = this.rootElement.querySelector(this.selectors.newTaskForm)
+    this.newTaskInputElement = this.rootElement.querySelector(this.selectors.newTaskInput)
+    this.filterTaskFormElement = this.rootElement.querySelector(this.selectors.filterTaskForm)
+    this.filterTaskInputElement = this.rootElement.querySelector(this.selectors.filterTaskInput)
+    this.doneTasksElement = this.rootElement.querySelector(this.selectors.doneTasks)
+    this.inProgressTasksElement = this.rootElement.querySelector(this.selectors.inProgressTasks)
+    this.listElement = this.rootElement.querySelector(this.selectors.list)
+    this.emptyMessageElement = this.rootElement.querySelector(this.selectors.emptyMessage)
+    this.state = {
+      items: this.getItemsFromLocalStorage(),
     }
-    return off
+    this.render()
+    this.bindEvents()
   }
 
-  function off(topic = 'news', handler) {
-    // TODO: 1) Прибрати handler із теми
-    //       2) Видалити тему, якщо підписників не залишилось
-    topics[topic].clear();
-    if (topics[topic].size === 0) {
-      delete topics[topic];
+  getItemsFromLocalStorage() {
+    const rawData = localStorage.getItem(this.localStorageKey)
+
+    if (!rawData) {
+      return []
+    }
+
+    try {
+      const parsedData = JSON.parse(rawData)
+      return Array.isArray(parsedData) ? parsedData : []
+    } catch {
+      console.log('Todo items parse error');
+      return []
     }
   }
 
-  function emit(topic, payload, delay = 0) {
-    // TODO: 1) Використати setTimeout з delay
-    //       2) Усередині таймера викликати всіх підписників теми з payload
-    //       3) Акуратно обійти ітерацію, якщо під час виклику відбудеться off()
-    setTimeout(() => {
-      if (!topics[topic]) return;
-      const handlers = topics[topic];
-      for (const handler of handlers) {
-        handler(payload);
+  saveItemsToLocalStorage() {
+    localStorage.setItem(
+      this.localStorageKey,
+      JSON.stringify(this.state.items)
+    )
+  }
+
+  render() {
+    // this.doneTasksElement.textContent = this.state.items. Из localStorage вытянуть таски с статусом done
+    // this.inProgressTasksElement.textContent = this.state.items. Из localStorage вытянуть таски с статусом in progress
+
+    const items = this.state.items
+
+    this.listElement.innerHTML = items.map(({ id, title, isChecked }) => `
+      <li
+      class="todo__item todo-item"
+      data-js-todo-item
+    >
+      <input
+        type="checkbox"
+        id="${id}"
+        class="todo-item__checkbox"
+        ${isChecked ? 'checked' : ''}
+        data-js-todo-item-checkbox
+      >
+      <label
+        for="${id}"
+        class="todo-item__label"
+        data-js-todo-item-label
+      >
+        ${title}
+      </label>
+      <button
+        class="todo-item__delete-button"
+        type="button"
+        title="Delete"
+        aria-label="delete"
+        data-js-todo-item-delete-button
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15 5L5 15M5 5L15 15"
+            stroke="#757575"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </li>  
+    `).join('')
+
+    const isEmptyItems = this.state.items.length === 0
+
+    this.emptyMessageElement.textContent = isEmptyItems ? 'There are not tasks yet' : ''
+  }
+
+  addItem(title) {
+    this.state.items.push({
+      id: crypto?.randomUUID() ?? Date.now().toString(),
+      title,
+      isChecked: false,
+    })
+    this.saveItemsToLocalStorage()
+    this.render()
+  }
+
+  deleteItem(id) {
+    this.state.items = this.state.items.filter((item) => item.id !== id)
+    this.saveItemsToLocalStorage()
+    this.render()
+  }
+
+  toggleCheckedState(id) {
+    this.state.items = this.state.items.map((item) => {
+      if (item.id === id) {
+        return {
+          ...item,
+          isChecked: !item.isChecked,
+        }
       }
-    },delay)
+
+      return item
+    })
+    this.saveItemsToLocalStorage()
+    this.render()
   }
 
-  return { on, off, emit };
+  onNewTaskFormSubmit = (event) => {
+    event.preventDefault()
+
+    const newTodoItemTitle = this.newTaskInputElement.value
+
+    if (newTodoItemTitle.trim().length > 0) {
+      this.addItem(newTodoItemTitle)
+      this.newTaskInputElement.value = '';
+      this.newTaskFormElement.focus()
+    }
+  }
+
+  onClick = ({ target }) => {
+    if (target.matches(this.selectors.itemDeleteButton)) {
+      const itemElement = target.closest(this.selectors.item)
+      const itemCheckBoxElement = itemElement.querySelector(this.selectors.itemCheckbox)
+
+      itemElement.classList.add(this.stateClasses.isDisappearing)
+
+      setTimeout(() => {
+        this.deleteItem(itemCheckBoxElement.id)
+      }, 400)
+    }
+  }
+
+  onChange = ({ target }) => {
+    if (target.matches(this.selectors.itemCheckbox)) {
+      this.toggleCheckedState(target.id)
+    }
+  }
+
+  bindEvents() {
+    this.newTaskFormElement.addEventListener('submit', this.onNewTaskFormSubmit)
+    this.listElement.addEventListener('click', this.onClick)
+    this.listElement.addEventListener('change', this.onChange)
+  }
 }
 
-// === ТЕСТ-ХАРНЕСС (НЕ МІНЯТИ, ТІЛЬКИ ЗАПУСКАТИ) ===
-// Після реалізації зніміть коментарі та виконайте сценарії нижче по черзі,
-// фіксуйте фактичний порядок логів у консолі.
+new Todo();
 
-// const bus = createBus();
-//
-// bus.on('tick', (x) => console.log('tick:', x));
-//
-// bus.emit('tick', { step: 1 }, 0);
-// console.log('after schedule');
-// Очікування: лог хендлера з’являється пізніше за "after schedule".
-
-// const bus = createBus();
-//
-// bus.on('tick', (x) => {
-//   console.log('handler step:', x.step);
-//   if (x.step === 1) {
-//     bus.emit('tick', { step: 2 }, 0);
-//   }
-// });
-//
-// bus.emit('tick', { step: 1 }, 0);
-// Завдання: зафіксувати послідовність появи step 1 та step 2
-// і пояснити, чому другий виклик приходить пізніше.
-
-// Тому що спочатку викликали функцію з step: 1, а потім вже зі step: 2
-
-// const bus = createBus();
-//
-// const off = bus.on('news', (x) => {
-//   console.log('news:', x);
-//   off(); // відписка після першого спрацювання
-// });
-//
-// bus.emit('news', 'A', 0);
-// bus.emit('news', 'B', 0);
-// Завдання: перевірити, що 'B' більше не доходить до хендлера.
-
-const bus = createBus();
-
-bus.on('ev', (v) => console.log('h1', v));
-bus.on('ev', (v) => console.log('h2', v));
-bus.on('ev', (v) => console.log('h3', v));
-
-bus.emit('ev', 42, 0);
-// Завдання: переконатися, що всі три обробники викликаються у межах одного емісу.
 
 
