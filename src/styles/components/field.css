@@ -37,3 +37,10 @@
     outline: none;
   }
 }
+
+.field__select-filter {
+  &:focus {
+      background-color: var(--color-grey-1);
+      outline: none;
+  }
+}
