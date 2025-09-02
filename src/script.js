@@ -16,32 +16,19 @@ getUsersData(userIds)
   .then((data) => {
     let arrOfUsers = [];
     userIds.forEach((id) => {
-      arrOfUsers.push(fetchUserData(id));
-      // for (let i = 0; i < data.length; i++) {
-      //   if (id === data[i].id) {
-      //     users.push(data[i])
-      //   }
-      // }
+      let userData = fetchUserData(id);
+      userData
+        .then((response) => {
+        return response.json();
+      })
+        .then((data) => {
+          arrOfUsers.push(data);
+        })
     })
-    // console.log(users);
+    console.log(arrOfUsers);
     return arrOfUsers;
   })
-  .then((users) => {
-    const currentUsers = [];
-    console.log(users);
-    users.forEach((user) => {
-      console.log(user.json());
-      currentUsers.push(user.json())
-    })
-    console.log(currentUsers);
-    return currentUsers;
-  })
-// function getUsersData(userIds) {
-//   return new Promise((resolve, reject) => {
-//
-//   })
-// }
-//
+
 // const userIds = [1, 2, 3, 4, 5];
 //
 // getUsersData(userIds).then((result) => {
