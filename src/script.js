@@ -29,11 +29,4 @@ getUsersData(userIds)
     return arrOfUsers;
   })
 
-// const userIds = [1, 2, 3, 4, 5];
-//
-// getUsersData(userIds).then((result) => {
-//   console.log("✅ Success:", result.success);
-//   console.log("❌ Errors:", result.errors);
-// })
-
 
