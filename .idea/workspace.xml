@@ -4,27 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89213c7d-bce3-4e9c-a578-40d96f275047" name="Changes" comment="hw-50">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icons/arrow-down-short.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icons/icon-check_white.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/button.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/field.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/todo-item.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/todo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/fonts.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/normalize.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/variables.css" beforeDir="false" />
+    <list default="true" id="89213c7d-bce3-4e9c-a578-40d96f275047" name="Changes" comment="hw-55">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/my-react-app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-react-app/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-react-app/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-react-app/src/main.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +206,7 @@
       <workItem from="1755969505258" duration="3157000" />
       <workItem from="1757087219211" duration="265000" />
       <workItem from="1757592580138" duration="19000" />
-      <workItem from="1757592639311" duration="1173000" />
+      <workItem from="1757592639311" duration="7922000" />
     </task>
     <task id="LOCAL-00001" summary="hw-18">
       <option name="closed" value="true" />
@@ -607,14 +592,21 @@
       <option name="project" value="LOCAL" />
       <updated>1757087378813</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="hw-55">
+      <option name="closed" value="true" />
+      <created>1757593936166</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1757593936166</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="hw-21" />
     <MESSAGE value="hw-22" />
     <MESSAGE value="hw-23" />
     <MESSAGE value="hw-25" />
@@ -639,6 +631,7 @@
     <MESSAGE value="test" />
     <MESSAGE value="hw-47" />
     <MESSAGE value="hw-50" />
-    <option name="LAST_COMMIT_MESSAGE" value="hw-50" />
+    <MESSAGE value="hw-55" />
+    <option name="LAST_COMMIT_MESSAGE" value="hw-55" />
   </component>
 </project>
