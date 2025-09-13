@@ -226,109 +226,303 @@ import { useState } from 'react';
 //   return null;
 // }
 
-const PRODUCTS = [
-  { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
-  { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
-  { category: "Fruits", price: "$2", stocked: false, name: "Passionfruit" },
-  { category: "Vegetables", price: "$2", stocked: true, name: "Spinach" },
-  { category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin" },
-  { category: "Vegetables", price: "$1", stocked: true, name: "Peas" }
-]
+// const PRODUCTS = [
+//   { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
+//   { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
+//   { category: "Fruits", price: "$2", stocked: false, name: "Passionfruit" },
+//   { category: "Vegetables", price: "$2", stocked: true, name: "Spinach" },
+//   { category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin" },
+//   { category: "Vegetables", price: "$1", stocked: true, name: "Peas" }
+// ]
+//
+// function ProductCategoryRow({category}) {
+//   return (
+//     <tr>
+//       <th colSpan="2">
+//         {category}
+//       </th>
+//     </tr>
+//   )
+// }
+//
+// function ProductRow({product}) {
+//   const name = product.stocked ? product.name :
+//     <span style={{color: 'red'}}>
+//       {product.name}
+//     </span>
+//
+//   return (
+//     <tr>
+//       <td>{name}</td>
+//       <td>{product.price}</td>
+//     </tr>
+//   )
+// }
+//
+// function ProductTable({products, filterText, inStockOnly}) {
+//   const rows = [];
+//   let lastCategory = null;
+//
+//   products.forEach((product) => {
+//     if (
+//       product.name.toLowerCase().indexOf(
+//         filterText.toLowerCase()
+//       ) === -1
+//     ) {
+//       return;
+//     }
+//     if (inStockOnly && !product.stocked) {
+//       return;
+//     }
+//     if (product.category !== lastCategory) {
+//       rows.push(
+//         <ProductCategoryRow
+//           category={product.category}
+//           key={product.category} />
+//       );
+//     }
+//     rows.push(
+//       <ProductRow
+//         product={product}
+//         key={product.name} />
+//     );
+//     lastCategory = product.category;
+//   });
+//
+//   return (
+//     <table>
+//       <thead>
+//         <tr>
+//           <th>Name</th>
+//           <th>Price</th>
+//         </tr>
+//       </thead>
+//       <tbody>
+//         {rows}
+//       </tbody>
+//     </table>
+//   )
+// }
+//
+// function SearchBar({filterText, inStockOnly, onFilterTextChange, onInStockOnlyChange}) {
+//   return (
+//     <form>
+//       <input type="text" placeholder="Search..." value={filterText} onChange={(e) => onFilterTextChange(e.target.value)}/>
+//       <label>
+//         <input type="checkbox" checked={inStockOnly} onChange={(e) => onInStockOnlyChange(e.target.checked)}/>
+//         {' '}
+//         Only show products in stock
+//       </label>
+//     </form>
+//   );
+// }
+//
+// function FilterableProductTable({products}) {
+//   const [filtertext, setFilterText] = useState('');
+//   const [inStockOnly, setInStockOnly] = useState(false);
+//
+//   return (
+//     <div>
+//       <SearchBar filterText={filtertext} inStockOnly={inStockOnly} onFilterTextChange={setFilterText} onInStockOnlyChange={setInStockOnly}/>
+//       <ProductTable products={products} filterText={filtertext} inStockOnly={inStockOnly}/>
+//     </div>
+//   )
+// }
+//
+// export default function App() {
+//   return <FilterableProductTable products={PRODUCTS}/>
+// }
 
-function ProductCategoryRow({category}) {
-  return (
-    <tr>
-      <th colSpan="2">
-        {category}
-      </th>
-    </tr>
-  )
+// function Profile() {
+//   return (
+//     <img
+//       src="https://i.imgur.com/MK3eW3As.jpg"
+//       alt="Katherine Johnson"
+//     />
+//   );
+// }
+//
+// export default function Gallery() {
+//   return (
+//     <section>
+//       <h1>Amazing scientists</h1>
+//       <Profile />
+//       <Profile />
+//       <Profile />
+//     </section>
+//   );
+// }
+
+import Gallery from "./components/Gallery.jsx";
+
+// export default function TodoList() {
+//   return (
+//     <>
+//       <h1>Hedy Lamarr's Todos</h1>
+//       <img
+//         src="https://i.imgur.com/yXOvdOSs.jpg"
+//         alt="Hedy Lamarr"
+//         className="photo"
+//       />
+//       <ul>
+//         <li>Invent new traffic lights</li>
+//         <li>Rehearse a movie scene</li>
+//         <li>Improve spectrum technology</li>
+//       </ul>
+//     </>
+//   );
+// }
+
+// const person = {
+//   name: 'Gregorio Y. Zara',
+//   theme: {
+//     backgroundColor: 'black',
+//     color: 'pink'
+//   }
+// };
+//
+// export default function TodoList() {
+//   return (
+//     <div style={person.theme}>
+//       <h1>{person.name}'s Todos</h1>
+//       <img
+//         className="avatar"
+//         src="https://i.imgur.com/7vQD0fPs.jpg"
+//         alt="Gregorio Y. Zara"
+//       />
+//       <ul>
+//         <li>Improve the videophone</li>
+//         <li>Prepare aeronautics lectures</li>
+//         <li>Work on the alcohol-fuelled engine</li>
+//       </ul>
+//     </div>
+//   );
+// }
+
+// import { getImageUrl } from './utils.jsx'
+//
+// export default function Profile() {
+//   return (
+//     <Card>
+//       <Avatar
+//         size={100}
+//         person={{
+//           name: 'Katsuko Saruhashi',
+//           imageId: 'YfeOqp2'
+//         }}
+//       />
+//     </Card>
+//   );
+// }
+//
+// function Avatar({ person, size }) {
+//   return (
+//     <img
+//       className="avatar"
+//       src={getImageUrl(person)}
+//       alt={person.name}
+//       width={size}
+//       height={size}
+//     />
+//   );
+// }
+//
+// function Card({ children }) {
+//   return (
+//     <div className="card">
+//       {children}
+//     </div>
+//   );
+// }
+
+// function Item({ name, isPacked }) {
+//   return (
+//     <li className="item">
+//       {name} {isPacked && '✅'}
+//     </li>
+//   );
+// }
+//
+// export default function PackingList() {
+//   return (
+//     <section>
+//       <h1>Sally Ride's Packing List</h1>
+//       <ul>
+//         <Item
+//           isPacked={true}
+//           name="Space suit"
+//         />
+//         <Item
+//           isPacked={true}
+//           name="Helmet with a golden leaf"
+//         />
+//         <Item
+//           isPacked={false}
+//           name="Photo of Tam"
+//         />
+//       </ul>
+//     </section>
+//   );
+// }
+
+// import { people } from './data.js';
+// import { getImageUrl } from './utils.jsx';
+//
+// export default function List() {
+//   const listItems = people.map(person =>
+//     <li key={person.id}>
+//       <img
+//         src={getImageUrl(person)}
+//         alt={person.name}
+//       />
+//       <p>
+//         <b>{person.name}:</b>
+//         {' ' + person.profession + ' '}
+//         known for {person.accomplishment}
+//       </p>
+//     </li>
+//   );
+//   return (
+//     <article>
+//       <h1>Scientists</h1>
+//       <ul>{listItems}</ul>
+//     </article>
+//   );
+// }
+
+// let guest = 0;
+//
+// function Cup() {
+//   // Bad: changing a preexisting variable!
+//   guest = guest + 1;
+//   return <h2>Tea cup for guest #{guest}</h2>;
+// }
+//
+// export default function TeaSet() {
+//   return (
+//     <>
+//       <Cup />
+//       <Cup />
+//       <Cup />
+//     </>
+//   );
+// }
+
+function Cup({ guest }) {
+  return <h2>Tea cup for guest #{guest}</h2>;
 }
 
-function ProductRow({product}) {
-  const name = product.stocked ? product.name :
-    <span style={{color: 'red'}}>
-      {product.name}
-    </span>
-
+export default function TeaSet() {
   return (
-    <tr>
-      <td>{name}</td>
-      <td>{product.price}</td>
-    </tr>
-  )
-}
-
-function ProductTable({products, filterText, inStockOnly}) {
-  const rows = [];
-  let lastCategory = null;
-
-  products.forEach((product) => {
-    if (
-      product.name.toLowerCase().indexOf(
-        filterText.toLowerCase()
-      ) === -1
-    ) {
-      return;
-    }
-    if (inStockOnly && !product.stocked) {
-      return;
-    }
-    if (product.category !== lastCategory) {
-      rows.push(
-        <ProductCategoryRow
-          category={product.category}
-          key={product.category} />
-      );
-    }
-    rows.push(
-      <ProductRow
-        product={product}
-        key={product.name} />
-    );
-    lastCategory = product.category;
-  });
-
-  return (
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        {rows}
-      </tbody>
-    </table>
-  )
-}
-
-function SearchBar({filterText, inStockOnly, onFilterTextChange, onInStockOnlyChange}) {
-  return (
-    <form>
-      <input type="text" placeholder="Search..." value={filterText} onChange={(e) => onFilterTextChange(e.target.value)}/>
-      <label>
-        <input type="checkbox" checked={inStockOnly} onChange={(e) => onInStockOnlyChange(e.target.checked)}/>
-        {' '}
-        Only show products in stock
-      </label>
-    </form>
+    <>
+      <Cup guest={1} />
+      <Cup guest={2} />
+      <Cup guest={3} />
+    </>
   );
 }
 
-function FilterableProductTable({products}) {
-  const [filtertext, setFilterText] = useState('');
-  const [inStockOnly, setInStockOnly] = useState(false);
 
-  return (
-    <div>
-      <SearchBar filterText={filtertext} inStockOnly={inStockOnly} onFilterTextChange={setFilterText} onInStockOnlyChange={setInStockOnly}/>
-      <ProductTable products={products} filterText={filtertext} inStockOnly={inStockOnly}/>
-    </div>
-  )
-}
 
-export default function App() {
-  return <FilterableProductTable products={PRODUCTS}/>
-}
+
+
