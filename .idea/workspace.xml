@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="89213c7d-bce3-4e9c-a578-40d96f275047" name="Changes" comment="hw-54">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-react-app/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/my-react-app/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/my-react-app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/src/components/Gallery.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/src/components/Profile.jsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,9 +89,11 @@
       <recent name="C:\Users\user\Desktop\front_end_pro_new" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\front_end_pro_new\my-react-app\src\assets\images" />
+      <recent name="C:\Users\user\Desktop\front_end_pro_new\my-react-app\src\assets" />
+      <recent name="C:\Users\user\Desktop\front_end_pro_new\my-react-app\src\images" />
       <recent name="C:\Users\user\Desktop\front_end_pro_new\pages" />
       <recent name="C:\Users\user\Desktop\front_end_pro_new" />
-      <recent name="C:\Users\user\Desktop\front_end_pro_new\js" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -207,15 +212,8 @@
       <workItem from="1757592639311" duration="8180000" />
       <workItem from="1757667795419" duration="3588000" />
       <workItem from="1757675558587" duration="7903000" />
-      <workItem from="1757754253663" duration="2811000" />
-    </task>
-    <task id="LOCAL-00004" summary="hw-21">
-      <option name="closed" value="true" />
-      <created>1750149167019</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1750149167019</updated>
+      <workItem from="1757754253663" duration="3452000" />
+      <workItem from="1758189070312" duration="6100000" />
     </task>
     <task id="LOCAL-00005" summary="hw-21">
       <option name="closed" value="true" />
@@ -601,7 +599,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757687206553</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="hw-54">
+      <option name="closed" value="true" />
+      <created>1757758062629</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1757758062629</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

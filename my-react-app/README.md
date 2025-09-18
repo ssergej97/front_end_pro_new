@@ -1,12 +1,29 @@
-# React + Vite
+Створення сторінки резюме
+Створіть просту односторінкову веб-сторінку, використовуючи Bootstrap 5. Використайте лише основні компоненти та класи.
+Вимоги до сторінки:
+Навігаційна панель (Navbar)
+Логотип або ім'я у лівій частині.
+Посилання на секції: About, Skills, Projects, Contact.
+Панель повинна бути фіксованою зверху.
+Секція "Про себе" (About)
+Використайте container для структури.
+Додайте свою фотографію (або заглушку) в одній колонці і текстовий опис в іншій.
+Використайте row та col для розподілу.
+Секція "Навички" (Skills)
+Додайте список навичок (наприклад, HTML, CSS, JavaScript) у вигляді прогрес-барів.
+Використовуйте компонент progress.
+Секція "Проєкти" (Projects)
+Створіть карточки (card) для кожного проєкту.
+У карточках використовуйте зображення, заголовок та короткий опис.
+Секція "Контакти" (Contact)
+Форма з полями: ім'я, email, повідомлення та кнопка "Submit".
+Використайте form-control для інпутів.
+Footer
+Додайте футер з текстом типу "© 2024 Your Name. All Rights Reserved."
+Використайте text-center для центрування.
+Додаткові вимоги:
+Використовуйте класи Bootstrap для стилізації, уникайте додавання власних CSS-стилів.
+Сторінка повинна виглядати добре на мобільних пристроях (перевірте адаптивність).
+Результат:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Після завершення завдання ви отримаєте адаптивну сторінку з основними компонентами Bootstrap.
