@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89213c7d-bce3-4e9c-a578-40d96f275047" name="Changes" comment="hw-50">
+    <list default="true" id="89213c7d-bce3-4e9c-a578-40d96f275047" name="Changes" comment="hw-57">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vite-project/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/App.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -218,14 +217,6 @@
       <workItem from="1758189070312" duration="6446000" />
       <workItem from="1758282854254" duration="239000" />
       <workItem from="1758283112987" duration="1366000" />
-    </task>
-    <task id="LOCAL-00006" summary="hw-22">
-      <option name="closed" value="true" />
-      <created>1750339865158</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1750339865158</updated>
     </task>
     <task id="LOCAL-00007" summary="hw-23">
       <option name="closed" value="true" />
@@ -611,14 +602,21 @@
       <option name="project" value="LOCAL" />
       <updated>1758196495431</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="hw-57">
+      <option name="closed" value="true" />
+      <created>1758298519701</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1758298519702</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="hw-25" />
     <MESSAGE value="hw-26" />
     <MESSAGE value="hw-27" />
     <MESSAGE value="hw-28" />
@@ -643,6 +641,7 @@
     <MESSAGE value="hw-55" />
     <MESSAGE value="hw-54" />
     <MESSAGE value="hw-53" />
-    <option name="LAST_COMMIT_MESSAGE" value="hw-53" />
+    <MESSAGE value="hw-57" />
+    <option name="LAST_COMMIT_MESSAGE" value="hw-57" />
   </component>
 </project>
