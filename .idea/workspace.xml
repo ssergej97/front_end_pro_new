@@ -4,12 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89213c7d-bce3-4e9c-a578-40d96f275047" name="Changes" comment="hw-54">
+    <list default="true" id="89213c7d-bce3-4e9c-a578-40d96f275047" name="Changes" comment="hw-53">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/my-react-app/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/my-react-app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/src/components/Gallery.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/src/components/Profile.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/eslint.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/src/App.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/src/assets/images/my-photo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/src/assets/images/project-1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/src/assets/images/project-2.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/src/assets/images/project-3.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/src/assets/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/src/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/src/main.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/src/utils.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-react-app/vite.config.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +46,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="hw-55" />
+        <entry key="$PROJECT_DIR$" value="hw-53" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,7 +82,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;hw-54&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;hw-57&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/front_end_pro_new&quot;,
@@ -213,15 +227,9 @@
       <workItem from="1757667795419" duration="3588000" />
       <workItem from="1757675558587" duration="7903000" />
       <workItem from="1757754253663" duration="3452000" />
-      <workItem from="1758189070312" duration="6100000" />
-    </task>
-    <task id="LOCAL-00005" summary="hw-21">
-      <option name="closed" value="true" />
-      <created>1750149292497</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1750149292497</updated>
+      <workItem from="1758189070312" duration="6446000" />
+      <workItem from="1758282854254" duration="239000" />
+      <workItem from="1758283112987" duration="1366000" />
     </task>
     <task id="LOCAL-00006" summary="hw-22">
       <option name="closed" value="true" />
@@ -607,14 +615,21 @@
       <option name="project" value="LOCAL" />
       <updated>1757758062629</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="hw-53">
+      <option name="closed" value="true" />
+      <created>1758196495431</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1758196495431</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="hw-23" />
     <MESSAGE value="hw-25" />
     <MESSAGE value="hw-26" />
     <MESSAGE value="hw-27" />
@@ -639,6 +654,7 @@
     <MESSAGE value="hw-50" />
     <MESSAGE value="hw-55" />
     <MESSAGE value="hw-54" />
-    <option name="LAST_COMMIT_MESSAGE" value="hw-54" />
+    <MESSAGE value="hw-53" />
+    <option name="LAST_COMMIT_MESSAGE" value="hw-53" />
   </component>
 </project>
