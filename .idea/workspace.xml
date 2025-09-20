@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="89213c7d-bce3-4e9c-a578-40d96f275047" name="Changes" comment="hw-57">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite-project/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vite-project/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/App.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="hw-53" />
+        <entry key="$PROJECT_DIR$" value="hw-57" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,7 +70,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "hw-57",
+    "git-widget-placeholder": "hw-56",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/Users/user/Desktop/front_end_pro_new",
@@ -218,23 +219,7 @@
       <workItem from="1758189070312" duration="6446000" />
       <workItem from="1758282854254" duration="239000" />
       <workItem from="1758283112987" duration="1366000" />
-      <workItem from="1758359104621" duration="1399000" />
-    </task>
-    <task id="LOCAL-00008" summary="hw-25">
-      <option name="closed" value="true" />
-      <created>1750674720058</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1750674720058</updated>
-    </task>
-    <task id="LOCAL-00009" summary="hw-26">
-      <option name="closed" value="true" />
-      <created>1750760130801</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1750760130801</updated>
+      <workItem from="1758359104621" duration="5643000" />
     </task>
     <task id="LOCAL-00010" summary="hw-27">
       <option name="closed" value="true" />
@@ -612,7 +597,23 @@
       <option name="project" value="LOCAL" />
       <updated>1758298901652</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="hw-57">
+      <option name="closed" value="true" />
+      <created>1758361523123</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1758361523123</updated>
+    </task>
+    <task id="LOCAL-00058" summary="hw-57">
+      <option name="closed" value="true" />
+      <created>1758361629882</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1758361629883</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

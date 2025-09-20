@@ -1,20 +1,12 @@
 import React from 'react'
-import Header from "./components/Header.jsx";
-import Aside from "./components/Aside.jsx";
+import SmileList from "./components/SmileList.jsx";
+import Result from "./components/Result.jsx";
+import SmileCount from "./components/SmileCount.jsx";
 
-class App extends React.Component {
-  render() {
+function App () {
     return (
-      <>
-        <Header></Header>
-        <main>
-            <div className="container">
-              <Aside></Aside>
-            </div>
-        </main>
-      </>
+      <SmileCount></SmileCount>
     )
-  }
 }
 
 export default App
