@@ -8,7 +8,9 @@ class App extends React.Component {
       <>
         <Header></Header>
         <main>
-            <Aside></Aside>
+            <div className="container">
+              <Aside></Aside>
+            </div>
         </main>
       </>
     )
