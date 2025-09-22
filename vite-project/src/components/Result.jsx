@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 
 function Result ({smileScore}) {
-  const [result, setResult] = useState(0);
+  const [result, setResult] = useState(null);
   const resultFunc = () => {
-    console.log(smileScore);
     let resultScore = 0;
     smileScore.forEach((value) => {
-      if (value > resultScore) {
-        resultScore = value;
+      if (value.score > resultScore) {
+        resultScore = value.score;
       }
     })
-    return resultScore;
+    let winnerSmile = null;
+    smileScore.forEach((value) => {
+      if (value.score === resultScore) {
+        winnerSmile = value.value;
+      }
+    })
+    return winnerSmile;
   }
 
   const handleShowResult = () => {
