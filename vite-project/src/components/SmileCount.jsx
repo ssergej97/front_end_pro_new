@@ -2,21 +2,6 @@ import React, { use, useState } from "react";
 import SmileList from "./SmileList.jsx";
 import Result from "./Result.jsx";
 
-// function SmileCount() {
-//   const [smileScore, addSmileScore] = useState(0);
-//
-//   function handleClick() {
-//     addSmileScore(smileScore + 1);
-//   }
-//
-//     return (
-//       <>
-//           <SmileList smileScore={smileScore} onSmileScoreChange={handleClick}></SmileList>
-//           <Result></Result>
-//       </>
-//     )
-// }
-
 function SmileCount() {
   const smiles = [{id: 1, value: "\u2764", score: 0}, {id: 2, value: "\uD83D\uDE00", score: 0}]
 
