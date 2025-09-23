@@ -1,32 +1,29 @@
 'use strict';
 
-function fetchUserData(userId) {
+async function fetchUserData(userId) {
   const url = `https://jsonplaceholder.typicode.com/users/${userId}`;
-  return fetch(url);
-}
-
-function getUsersData(userIds) {
-  const url = `https://jsonplaceholder.typicode.com/users`;
-  return fetch(url);
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error('Error');
+  }
+  return response.json();
 }
 
 const userIds = [1, 2, 3, 4, 5];
 
-getUsersData(userIds)
-  .then((data) => {
-    let arrOfUsers = [];
-    userIds.forEach((id) => {
-      let userData = fetchUserData(id);
-      userData
-        .then((response) => {
-        return response.json();
-      })
-        .then((data) => {
-          arrOfUsers.push(data);
-        })
-    })
-    console.log(arrOfUsers);
-    return arrOfUsers;
-  })
+async function getUsersData(userIds) {
+  try {
+    const userPromises = userIds.map(id => fetchUserData(id));
 
+    const users = await Promise.all(userPromises);
+
+    console.log(users);
+    return users;
+
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+getUsersData(userIds);
 
