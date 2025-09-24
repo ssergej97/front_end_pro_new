@@ -1,12 +1,25 @@
-import React from 'react'
-import SmileList from "./components/SmileList.jsx";
-import Result from "./components/Result.jsx";
-import SmileCount from "./components/SmileCount.jsx";
+import React from "react";
+import Task from "./components/Task.jsx";
+import Form from "./components/Form.jsx";
 
-function App () {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {name: "Buy bananas"}
+  }
+
+
+  render() {
     return (
-      <SmileCount></SmileCount>
-    )
+      <>
+        <h1>To Do List</h1>
+        <ul style={{listStyleType: "none", paddingLeft: 0}}>
+          <Task task={this.state}></Task>
+        </ul>
+        <Form task={this.state} onTask={this.setState}></Form>
+      </>
+    );
+  }
 }
 
 export default App
