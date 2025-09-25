@@ -6,14 +6,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tasks: [
-        {
-          name: 'Buy apples',
-          id: 1,
-          undo: true,
-          do: false
-        },
-      ]
+      tasks: []
     }
   }
 
@@ -21,9 +14,19 @@ class App extends React.Component {
     this.setState(prevState => ({
       tasks: [
         ...prevState.tasks,
-        {...updatedTaskDetails, id: prevState.tasks.at(-1).id + 1, status: true,}
+        {
+          ...updatedTaskDetails,
+          id: crypto?.randomUUID() ?? Date.now().toString(),
+          status: true,
+          undo: true,
+          do: false
+        }
       ]
     }))
+  }
+
+  handleChangeStatus = (tasks) => {
+    this.setState({tasks})
   }
 
 
@@ -31,7 +34,7 @@ class App extends React.Component {
     return (
       <>
         <h1 className="m-2">To Do List</h1>
-        <TaskList taskList={this.state}></TaskList>
+        <TaskList taskList={this.state} onStatus={this.handleChangeStatus}></TaskList>
         <Form task={this.state} onTask={this.handleTaskChange}></Form>
       </>
     );

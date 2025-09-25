@@ -3,16 +3,22 @@ import classnames from 'classnames';
 
 class TaskList extends React.Component {
 
-  handleChangeStatus = (e) => {
+  handleClick = (e) => {
+    const data = [...this.props.taskList.tasks];
     const taskValue = e.target.textContent
     console.dir(e.target.textContent);
-    this.props.taskList.tasks.forEach((item) => {
+    console.dir(this.props.taskList.tasks);
+    console.dir(data);
+    data.forEach((item) => {
       if (item.name === taskValue) {
-        item.undo = false
-        item.do = true
+        item.undo ? item.undo = false : item.undo = true
+        item.do ? item.do = false : item.do = true
       }
     })
+    console.log(data);
+    this.props.onStatus(data)
   }
+
 
   render() {
     return (
@@ -26,7 +32,7 @@ class TaskList extends React.Component {
               'btn-success': task.do
             }
           );
-          return <li key={task.id}><button className={btnClasses} onClick={(e) => this.handleChangeStatus(e)}>{task.name}</button></li>
+          return <li key={task.id}><button className={btnClasses} onClick={(e) => this.handleClick(e)}>{task.name}</button></li>
         })}
       </ul>
     );

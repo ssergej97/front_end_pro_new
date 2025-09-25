@@ -12,10 +12,15 @@ class Form extends React.Component {
   render() {
     return (
       <form className="ms-2">
-        <input className="me-2" type="text" value={this.state.name} onChange={(e) => this.setState({ name: e.target.value })}/>
+        <input
+          className="me-2"
+          type="text"
+          value={this.state.name}
+          onChange={(e) => this.setState({ name: e.target.value })}
+        />
         <button
           type="button"
-          className="btn btn-primary"
+          className="btn btn-primary me-2"
           onClick={() => this.props.onTask({ name: this.state.name })}
         >Create task
         </button>
