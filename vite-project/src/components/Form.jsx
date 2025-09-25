@@ -3,17 +3,20 @@ import React from "react";
 class Form extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {date: new Date()};
-    console.log(this.props.onTask);
+    this.state = {
+      name: '',
+    }
   }
+
 
   render() {
     return (
-      <form>
-        <input className="me-2" type="text" name="task" value={this.props.task.name} onChange={(e) => this.props.onTask({ name: e.target.value })}/>
+      <form className="ms-2">
+        <input className="me-2" type="text" value={this.state.name} onChange={(e) => this.setState({ name: e.target.value })}/>
         <button
           type="button"
           className="btn btn-primary"
+          onClick={() => this.props.onTask({ name: this.state.name })}
         >Create task
         </button>
       </form>
