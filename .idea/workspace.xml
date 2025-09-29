@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89213c7d-bce3-4e9c-a578-40d96f275047" name="Changes" comment="hw-56">
+    <list default="true" id="89213c7d-bce3-4e9c-a578-40d96f275047" name="Changes" comment="hw-59">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/App.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,15 +221,7 @@
       <workItem from="1758359104621" duration="5886000" />
       <workItem from="1758441012324" duration="5319000" />
       <workItem from="1758447860556" duration="1889000" />
-      <workItem from="1759131690158" duration="8560000" />
-    </task>
-    <task id="LOCAL-00013" summary="hw-33">
-      <option name="closed" value="true" />
-      <created>1751554895963</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1751554895963</updated>
+      <workItem from="1759131690158" duration="10076000" />
     </task>
     <task id="LOCAL-00014" summary="hw-34">
       <option name="closed" value="true" />
@@ -618,14 +607,21 @@
       <option name="project" value="LOCAL" />
       <updated>1758449750272</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="hw-59">
+      <option name="closed" value="true" />
+      <created>1759142342444</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1759142342444</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="hw-26" />
     <MESSAGE value="hw-27" />
     <MESSAGE value="hw-28" />
     <MESSAGE value="hw-29" />
@@ -650,6 +646,7 @@
     <MESSAGE value="hw-54" />
     <MESSAGE value="hw-53" />
     <MESSAGE value="hw-57" />
-    <option name="LAST_COMMIT_MESSAGE" value="hw-57" />
+    <MESSAGE value="hw-59" />
+    <option name="LAST_COMMIT_MESSAGE" value="hw-59" />
   </component>
 </project>
