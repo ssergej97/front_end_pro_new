@@ -91,11 +91,11 @@
       <recent name="C:\Users\user\Desktop\front_end_pro_new" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/vite-project/src/assets/images" />
       <recent name="C:\Users\user\Desktop\front_end_pro_new\my-react-app\src\assets\images" />
       <recent name="C:\Users\user\Desktop\front_end_pro_new\my-react-app\src\assets" />
       <recent name="C:\Users\user\Desktop\front_end_pro_new\my-react-app\src\images" />
       <recent name="C:\Users\user\Desktop\front_end_pro_new\pages" />
-      <recent name="C:\Users\user\Desktop\front_end_pro_new" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -221,15 +221,7 @@
       <workItem from="1758359104621" duration="5886000" />
       <workItem from="1758441012324" duration="5319000" />
       <workItem from="1758447860556" duration="1889000" />
-      <workItem from="1759131690158" duration="10076000" />
-    </task>
-    <task id="LOCAL-00014" summary="hw-34">
-      <option name="closed" value="true" />
-      <created>1751621696825</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1751621696825</updated>
+      <workItem from="1759131690158" duration="11502000" />
     </task>
     <task id="LOCAL-00015" summary="hw-32">
       <option name="closed" value="true" />
@@ -615,7 +607,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759142342444</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="hw-59">
+      <option name="closed" value="true" />
+      <created>1759148631898</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1759148631899</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
