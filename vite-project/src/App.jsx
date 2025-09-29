@@ -1,18 +1,11 @@
 import React from 'react'
-import Header from "./components/Header.jsx";
-import Aside from "./components/Aside.jsx";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import UserCreation from "./components/UserCreation";
 
 class App extends React.Component {
   render() {
     return (
-      <>
-        <Header></Header>
-        <main>
-            <div className="container">
-              <Aside></Aside>
-            </div>
-        </main>
-      </>
+      <UserCreation></UserCreation>
     )
   }
 }
