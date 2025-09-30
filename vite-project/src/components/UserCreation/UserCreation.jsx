@@ -30,7 +30,11 @@ class UserCreation extends React.Component {
     const data = {...this.state}
 
     if(event.target.name === fieldName) {
-      data[fieldName] = event.target.value;
+      if (fieldName === "age" && event.target.value <= 0) {
+        data[fieldName] = 1;
+      } else {
+        data[fieldName] = event.target.value;
+      }
     }
 
     this.setState({
