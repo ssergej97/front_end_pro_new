@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 
 // Class component lifecycle
 // class Timer extends React.Component {
@@ -41,17 +41,31 @@ import Button from 'react-bootstrap/Button';
 
 // Functional component lifecycle
 const Timer = () => {
-  const [count, setCount] = useState(0);
+
+  const getDataFromLocalStorage = () => {
+    if (localStorage.getItem('timer')) {
+      return JSON.parse(localStorage.getItem('timer'));
+    }
+    return 0;
+  }
+
+  const [count, setCount] = useState(getDataFromLocalStorage);
 
   useEffect(() => {
+
     const interval = setInterval(() => {
       setCount((prevCount) => prevCount + 1);
     }, 1000);
+
+    localStorage.setItem('timer', JSON.stringify(count));
 
     console.log(count);
 
     return () => clearInterval(interval);
   }, [count])
+
+
+
 
   return (
     <>
