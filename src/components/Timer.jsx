@@ -51,7 +51,7 @@ const Timer = () => {
     console.log(count);
 
     return () => clearInterval(interval);
-  })
+  }, [count])
 
   return (
     <>
