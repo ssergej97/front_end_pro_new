@@ -1,35 +1,34 @@
-import Timer from "./components/Timer";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from "react-bootstrap/Button";
 import React, { useState } from "react";
-
-// class App extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       status: true
-//     }
-//   }
-//
-//   render() {
-//     return (
-//       <>
-//         {
-//           this.state.status && <Timer></Timer>
-//         }
-//         <Button onClick={() => this.setState({status: false})} className="m-2" variant="danger">Unmount Timer</Button>
-//       </>
-//     );
-//   }
-// }
+import SearchBar from "./components/SearchBar";
+import WeatherCard from "./components/WeatherCard";
+import FavoritesList from "./components/FavoritesList";
+import { Col, Container, Row } from "react-bootstrap";
 
 const App = () => {
-  const [status, setStatus] = useState(true)
 
   return (
     <>
-      {status && <Timer></Timer>}
-      <Button onClick={() => setStatus(false)} className="m-2" variant="danger">Unmount Timer</Button>
+      <Container>
+        <Row>
+          <Col>
+            <h1 className="mb-3">Weather Dashboard</h1>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <SearchBar ></SearchBar>
+          </Col>
+          <Col>
+            <WeatherCard></WeatherCard>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <FavoritesList></FavoritesList>
+          </Col>
+        </Row>
+      </Container>
     </>
   )
 }

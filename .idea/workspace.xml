@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89213c7d-bce3-4e9c-a578-40d96f275047" name="Changes" comment="hw-60">
+      <change afterPath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SearchBar/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Timer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Timer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="hw-58" />
+        <entry key="$PROJECT_DIR$" value="hw-60" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,10 +74,10 @@
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;hw-60&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;hw-61&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/front_end_pro_new&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/front_end_pro_new/src/components/FavoritesList&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -89,14 +94,17 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\front_end_pro_new\src\components\FavoritesList" />
+      <recent name="C:\Users\user\Desktop\front_end_pro_new\src\components" />
+      <recent name="C:\Users\user\Desktop\front_end_pro_new\src\components\WeatherCard" />
       <recent name="C:\Users\user\Desktop\front_end_pro_new" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\front_end_pro_new\src\components\SearchBar" />
       <recent name="C:\Users\user\Desktop\front_end_pro_new" />
       <recent name="C:\Users\user\Desktop\front_end_pro_new\my-react-app\src\assets\images" />
       <recent name="C:\Users\user\Desktop\front_end_pro_new\my-react-app\src\assets" />
       <recent name="C:\Users\user\Desktop\front_end_pro_new\my-react-app\src\images" />
-      <recent name="C:\Users\user\Desktop\front_end_pro_new\pages" />
     </key>
   </component>
   <component name="RunManager">
@@ -119,7 +127,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-9c94529fcfe0-JavaScript-WS-252.26199.162" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.26830.93" />
       </set>
     </attachedChunks>
   </component>
@@ -246,15 +254,11 @@
       <workItem from="1759322008313" duration="598000" />
       <workItem from="1759413151336" duration="4357000" />
       <workItem from="1759481848278" duration="4655000" />
-      <workItem from="1759496787607" duration="3827000" />
-    </task>
-    <task id="LOCAL-00019" summary="hw-36">
-      <option name="closed" value="true" />
-      <created>1752766337599</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1752766337599</updated>
+      <workItem from="1759496787607" duration="4005000" />
+      <workItem from="1759738474869" duration="101000" />
+      <workItem from="1759738603897" duration="29000" />
+      <workItem from="1760606080085" duration="2433000" />
+      <workItem from="1760619183924" duration="3872000" />
     </task>
     <task id="LOCAL-00020" summary="hw-36">
       <option name="closed" value="true" />
@@ -640,7 +644,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759487918093</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="hw-60">
+      <option name="closed" value="true" />
+      <created>1759500677399</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1759500677399</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
