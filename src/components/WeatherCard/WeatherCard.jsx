@@ -13,7 +13,7 @@ const WeatherCard = () => {
       <p>Description: Mostly cloudy</p>
       <h3>Further days</h3>
       <ul>
-        <li>16.10 -> 9° 4°</li>
+        <li>16.10 `&gt;` 9° 4°</li>
       </ul>
       <Button variant="dark">Add to favourites</Button>
     </>
