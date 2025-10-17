@@ -1,4 +1,5 @@
-import Button from "react-bootstrap/Button";
+import { Button, Modal } from "react-bootstrap";
+import React, { useState } from "react";
 
 const WeatherCard = ({weatherInfo, city, setCityList}) => {
 
@@ -26,7 +27,7 @@ const WeatherCard = ({weatherInfo, city, setCityList}) => {
       { weatherInfo ? (
         <>
           <h2 className="mb-3">Weather Information</h2>
-          <p><span className="fw-bolder">Location:</span> {weatherInfo.timezone}</p>
+          <p><span className="fw-bolder">Location:</span> {city}</p>
           <p><span className="fw-bolder">Temperature:</span> {weatherInfo.current_weather.temperature} °C</p>
           <p><span className="fw-bolder">Wind Speed:</span> {weatherInfo.current_weather.windspeed} km/h</p>
           <h3>Further days</h3>
@@ -61,6 +62,29 @@ const WeatherCard = ({weatherInfo, city, setCityList}) => {
         ) : (
           <p>Search for a city</p>
         )}
+      {
+        city ? (
+          <div
+            className="modal show"
+            style={{ display: 'block', position: 'initial' }}
+          >
+            <Modal.Dialog>
+              <Modal.Header closeButton>
+                <Modal.Title>Modal title</Modal.Title>
+              </Modal.Header>
+
+              <Modal.Body>
+                <p>Modal body text goes here.</p>
+              </Modal.Body>
+
+              <Modal.Footer>
+                <Button variant="secondary">Close</Button>
+                <Button variant="primary">Save changes</Button>
+              </Modal.Footer>
+            </Modal.Dialog>
+          </div>
+        ) : null
+      }
     </>
   )
 }
