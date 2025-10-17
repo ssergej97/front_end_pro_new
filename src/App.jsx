@@ -1,11 +1,25 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SearchBar from "./components/SearchBar";
 import WeatherCard from "./components/WeatherCard";
 import FavoritesList from "./components/FavoritesList";
 import { Col, Container, Row } from "react-bootstrap";
 
 const App = () => {
+  const [city, setCity] = useState('');
+  const [weather, setWeather] = useState(null);
+
+  useEffect(() => {
+    if (city) {
+      fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1&language=uk`)
+        .then(res => res.json())
+        .then((result) => {
+          fetch(`https://api.open-meteo.com/v1/forecast?latitude=${result.results[0].latitude}&longitude=${result.results[0].longitude}&current_weather=true&daily=temperature_2m_max,temperature_2m_min&timezone=auto`)
+            .then(res => res.json())
+            .then(result => setWeather(result))
+        })
+    }
+  }, [city]);
 
   return (
     <>
@@ -17,10 +31,10 @@ const App = () => {
         </Row>
         <Row>
           <Col>
-            <SearchBar ></SearchBar>
+            <SearchBar setCity={setCity}></SearchBar>
           </Col>
           <Col>
-            <WeatherCard></WeatherCard>
+            <WeatherCard city={city} weatherInfo={weather}></WeatherCard>
           </Col>
         </Row>
         <Row>

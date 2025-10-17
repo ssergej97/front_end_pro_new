@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89213c7d-bce3-4e9c-a578-40d96f275047" name="Changes" comment="hw-60">
-      <change afterPath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SearchBar/index.js" afterDir="false" />
+    <list default="true" id="89213c7d-bce3-4e9c-a578-40d96f275047" name="Changes" comment="hw-61">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Timer.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FavoritesList/FavoritesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FavoritesList/FavoritesList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WeatherCard/WeatherCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherCard/WeatherCard.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,23 +256,8 @@
       <workItem from="1759738474869" duration="101000" />
       <workItem from="1759738603897" duration="29000" />
       <workItem from="1760606080085" duration="2433000" />
-      <workItem from="1760619183924" duration="3872000" />
-    </task>
-    <task id="LOCAL-00020" summary="hw-36">
-      <option name="closed" value="true" />
-      <created>1752828657129</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1752828657129</updated>
-    </task>
-    <task id="LOCAL-00021" summary="hw-32">
-      <option name="closed" value="true" />
-      <created>1752829563466</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1752829563466</updated>
+      <workItem from="1760619183924" duration="4169000" />
+      <workItem from="1760690351696" duration="7931000" />
     </task>
     <task id="LOCAL-00022" summary="hw-31">
       <option name="closed" value="true" />
@@ -652,14 +635,29 @@
       <option name="project" value="LOCAL" />
       <updated>1759500677399</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="hw-61">
+      <option name="closed" value="true" />
+      <created>1760623890114</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1760623890115</updated>
+    </task>
+    <task id="LOCAL-00070" summary="hw-61">
+      <option name="closed" value="true" />
+      <created>1760623924034</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1760623924034</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="hw-28" />
     <MESSAGE value="hw-29" />
     <MESSAGE value="hw-33" />
     <MESSAGE value="hw-34" />
@@ -684,6 +682,7 @@
     <MESSAGE value="hw-57" />
     <MESSAGE value="hw-58" />
     <MESSAGE value="hw-60" />
-    <option name="LAST_COMMIT_MESSAGE" value="hw-60" />
+    <MESSAGE value="hw-61" />
+    <option name="LAST_COMMIT_MESSAGE" value="hw-61" />
   </component>
 </project>
