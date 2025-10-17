@@ -8,6 +8,7 @@ import { Col, Container, Row } from "react-bootstrap";
 const App = () => {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
+  const [cityList, setCityList] = useState(null);
 
   useEffect(() => {
     if (city) {
@@ -34,12 +35,12 @@ const App = () => {
             <SearchBar setCity={setCity}></SearchBar>
           </Col>
           <Col>
-            <WeatherCard city={city} weatherInfo={weather}></WeatherCard>
+            <WeatherCard city={city} weatherInfo={weather} setCityList={setCityList}></WeatherCard>
           </Col>
         </Row>
         <Row>
           <Col>
-            <FavoritesList></FavoritesList>
+            <FavoritesList cityList={cityList} setCityList={setCityList}></FavoritesList>
           </Col>
         </Row>
       </Container>

@@ -1,20 +1,24 @@
 import Button from "react-bootstrap/Button";
 
-const WeatherCard = ({weatherInfo, city}) => {
+const WeatherCard = ({weatherInfo, city, setCityList}) => {
 
   const handleClick = () => {
     if (!localStorage.getItem("cities")) {
       const arrayOfCities = [];
       const copyCity = city;
-      arrayOfCities.push(copyCity);
+      const cityObj = {id: 1, name: copyCity}
+      arrayOfCities.push(cityObj);
+      setCityList(arrayOfCities);
       localStorage.setItem("cities", JSON.stringify(arrayOfCities));
+      return;
     }
 
     const arrayOfCities = JSON.parse(localStorage.getItem("cities"));
     const copyCity = city;
-    arrayOfCities.push(copyCity);
+    const citiesObj = {id: arrayOfCities.at(-1).id + 1, name: copyCity}
+    arrayOfCities.push(citiesObj);
+    setCityList(arrayOfCities);
     localStorage.setItem("cities", JSON.stringify(arrayOfCities));
-
   };
 
   return (
