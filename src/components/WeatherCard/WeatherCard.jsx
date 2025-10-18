@@ -1,7 +1,8 @@
 import { Button, Modal } from "react-bootstrap";
 import React, { useState } from "react";
 
-const WeatherCard = ({weatherInfo, city, setCityList}) => {
+const WeatherCard = ({weatherInfo, city, setCityList, show, handleClose, handleShow}) => {
+
 
   const handleClick = () => {
     if (!localStorage.getItem("cities")) {
@@ -63,27 +64,12 @@ const WeatherCard = ({weatherInfo, city, setCityList}) => {
           <p>Search for a city</p>
         )}
       {
-        city ? (
-          <div
-            className="modal show"
-            style={{ display: 'block', position: 'initial' }}
-          >
-            <Modal.Dialog>
-              <Modal.Header closeButton>
-                <Modal.Title>Modal title</Modal.Title>
-              </Modal.Header>
-
-              <Modal.Body>
-                <p>Modal body text goes here.</p>
-              </Modal.Body>
-
-              <Modal.Footer>
-                <Button variant="secondary">Close</Button>
-                <Button variant="primary">Save changes</Button>
-              </Modal.Footer>
-            </Modal.Dialog>
-          </div>
-        ) : null
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Error</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>You entered a city that does not exist. Please enter a valid city</Modal.Body>
+        </Modal>
       }
     </>
   )

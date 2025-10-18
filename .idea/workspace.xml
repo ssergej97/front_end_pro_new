@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89213c7d-bce3-4e9c-a578-40d96f275047" name="Changes" comment="hw-61">
+    <list default="true" id="89213c7d-bce3-4e9c-a578-40d96f275047" name="Changes" comment="hw-59">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/WeatherCard/WeatherCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherCard/WeatherCard.jsx" afterDir="false" />
     </list>
@@ -30,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="hw-60" />
+        <entry key="$PROJECT_DIR$" value="hw-59" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,9 +46,12 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/ssergej97/front_end_pro_new.git&quot;,
-    &quot;accountId&quot;: &quot;c12629a7-8c60-4d48-ad1f-96b66dbeac3a&quot;
+    &quot;accountId&quot;: &quot;ee76349d-c7e7-46ac-9a6e-ee501b37b9bc&quot;
   }
 }</component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -73,7 +78,7 @@
     &quot;git-widget-placeholder&quot;: &quot;hw-61&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/front_end_pro_new/src/components/FavoritesList&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/sergey/WebstormProjects/front_end_pro_new/vite-project/src/components&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -81,26 +86,24 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/sergey/WebstormProjects/front_end_pro_new/node_modules/prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Desktop\front_end_pro_new\src\components\FavoritesList" />
-      <recent name="C:\Users\user\Desktop\front_end_pro_new\src\components" />
-      <recent name="C:\Users\user\Desktop\front_end_pro_new\src\components\WeatherCard" />
+      <recent name="$PROJECT_DIR$/vite-project/src/components" />
       <recent name="C:\Users\user\Desktop\front_end_pro_new" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Desktop\front_end_pro_new\src\components\SearchBar" />
-      <recent name="C:\Users\user\Desktop\front_end_pro_new" />
+      <recent name="$PROJECT_DIR$/vite-project/src/assets/images" />
       <recent name="C:\Users\user\Desktop\front_end_pro_new\my-react-app\src\assets\images" />
       <recent name="C:\Users\user\Desktop\front_end_pro_new\my-react-app\src\assets" />
       <recent name="C:\Users\user\Desktop\front_end_pro_new\my-react-app\src\images" />
+      <recent name="C:\Users\user\Desktop\front_end_pro_new\pages" />
     </key>
   </component>
   <component name="RunManager">
@@ -123,7 +126,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.26830.93" />
+        <option value="bundled-js-predefined-d6986cc7102b-9c94529fcfe0-JavaScript-WS-252.26199.162" />
       </set>
     </attachedChunks>
   </component>
@@ -242,21 +245,74 @@
       <workItem from="1758283112987" duration="1366000" />
       <workItem from="1758359104621" duration="5886000" />
       <workItem from="1758441012324" duration="5319000" />
-      <workItem from="1758447860556" duration="1875000" />
-      <workItem from="1758535646240" duration="1441000" />
-      <workItem from="1758793552105" duration="5508000" />
-      <workItem from="1758801216217" duration="2947000" />
-      <workItem from="1759315098831" duration="4000" />
-      <workItem from="1759322008313" duration="598000" />
-      <workItem from="1759413151336" duration="4357000" />
-      <workItem from="1759481848278" duration="4655000" />
-      <workItem from="1759496787607" duration="4005000" />
-      <workItem from="1759738474869" duration="101000" />
-      <workItem from="1759738603897" duration="29000" />
-      <workItem from="1760606080085" duration="2433000" />
-      <workItem from="1760619183924" duration="4169000" />
-      <workItem from="1760690351696" duration="8083000" />
-      <workItem from="1760704391393" duration="8262000" />
+      <workItem from="1758447860556" duration="1889000" />
+      <workItem from="1759131690158" duration="11763000" />
+      <workItem from="1759218376610" duration="945000" />
+      <workItem from="1760780786807" duration="3584000" />
+    </task>
+    <task id="LOCAL-00016" summary="hw-31">
+      <option name="closed" value="true" />
+      <created>1752423369260</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1752423369260</updated>
+    </task>
+    <task id="LOCAL-00017" summary="hw-35">
+      <option name="closed" value="true" />
+      <created>1752566465824</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1752566465824</updated>
+    </task>
+    <task id="LOCAL-00018" summary="hw-36">
+      <option name="closed" value="true" />
+      <created>1752679620536</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1752679620536</updated>
+    </task>
+    <task id="LOCAL-00019" summary="hw-36">
+      <option name="closed" value="true" />
+      <created>1752766337599</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1752766337599</updated>
+    </task>
+    <task id="LOCAL-00020" summary="hw-36">
+      <option name="closed" value="true" />
+      <created>1752828657129</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1752828657129</updated>
+    </task>
+    <task id="LOCAL-00021" summary="hw-32">
+      <option name="closed" value="true" />
+      <created>1752829563466</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1752829563466</updated>
+    </task>
+    <task id="LOCAL-00022" summary="hw-31">
+      <option name="closed" value="true" />
+      <created>1752829845025</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1752829845025</updated>
+    </task>
+    <task id="LOCAL-00023" summary="hw-31">
+      <option name="closed" value="true" />
+      <created>1752829922271</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1752829922271</updated>
     </task>
     <task id="LOCAL-00024" summary="hw-37">
       <option name="closed" value="true" />
@@ -554,109 +610,47 @@
       <option name="project" value="LOCAL" />
       <updated>1758446341804</updated>
     </task>
-    <task id="LOCAL-00061" summary="hw-58">
+    <task id="LOCAL-00061" summary="hw-57">
       <option name="closed" value="true" />
-      <created>1758726938463</created>
+      <created>1758449750272</created>
       <option name="number" value="00061" />
       <option name="presentableId" value="LOCAL-00061" />
       <option name="project" value="LOCAL" />
-      <updated>1758726938463</updated>
+      <updated>1758449750272</updated>
     </task>
-    <task id="LOCAL-00062" summary="hw-58">
+    <task id="LOCAL-00062" summary="hw-59">
       <option name="closed" value="true" />
-      <created>1758799067876</created>
+      <created>1759142342444</created>
       <option name="number" value="00062" />
       <option name="presentableId" value="LOCAL-00062" />
       <option name="project" value="LOCAL" />
-      <updated>1758799067876</updated>
+      <updated>1759142342444</updated>
     </task>
-    <task id="LOCAL-00063" summary="hw-58">
+    <task id="LOCAL-00063" summary="hw-59">
       <option name="closed" value="true" />
-      <created>1758804070693</created>
+      <created>1759148631898</created>
       <option name="number" value="00063" />
       <option name="presentableId" value="LOCAL-00063" />
       <option name="project" value="LOCAL" />
-      <updated>1758804070694</updated>
+      <updated>1759148631899</updated>
     </task>
-    <task id="LOCAL-00064" summary="hw-58">
+    <task id="LOCAL-00064" summary="hw-59">
       <option name="closed" value="true" />
-      <created>1759415077585</created>
+      <created>1759150277688</created>
       <option name="number" value="00064" />
       <option name="presentableId" value="LOCAL-00064" />
       <option name="project" value="LOCAL" />
-      <updated>1759415077585</updated>
+      <updated>1759150277688</updated>
     </task>
-    <task id="LOCAL-00065" summary="hw-60">
-      <option name="closed" value="true" />
-      <created>1759417478284</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1759417478284</updated>
-    </task>
-    <task id="LOCAL-00066" summary="hw-60">
-      <option name="closed" value="true" />
-      <created>1759486762025</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1759486762025</updated>
-    </task>
-    <task id="LOCAL-00067" summary="hw-60">
-      <option name="closed" value="true" />
-      <created>1759487918093</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1759487918093</updated>
-    </task>
-    <task id="LOCAL-00068" summary="hw-60">
-      <option name="closed" value="true" />
-      <created>1759500677399</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1759500677399</updated>
-    </task>
-    <task id="LOCAL-00069" summary="hw-61">
-      <option name="closed" value="true" />
-      <created>1760623890114</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1760623890115</updated>
-    </task>
-    <task id="LOCAL-00070" summary="hw-61">
-      <option name="closed" value="true" />
-      <created>1760623924034</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1760623924034</updated>
-    </task>
-    <task id="LOCAL-00071" summary="hw-61">
-      <option name="closed" value="true" />
-      <created>1760700303940</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1760700303940</updated>
-    </task>
-    <task id="LOCAL-00072" summary="hw-61">
-      <option name="closed" value="true" />
-      <created>1760709106696</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1760709106696</updated>
-    </task>
-    <option name="localTasksCounter" value="73" />
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="hw-27" />
+    <MESSAGE value="hw-28" />
     <MESSAGE value="hw-29" />
     <MESSAGE value="hw-33" />
     <MESSAGE value="hw-34" />
@@ -679,9 +673,7 @@
     <MESSAGE value="hw-54" />
     <MESSAGE value="hw-53" />
     <MESSAGE value="hw-57" />
-    <MESSAGE value="hw-58" />
-    <MESSAGE value="hw-60" />
-    <MESSAGE value="hw-61" />
-    <option name="LAST_COMMIT_MESSAGE" value="hw-61" />
+    <MESSAGE value="hw-59" />
+    <option name="LAST_COMMIT_MESSAGE" value="hw-59" />
   </component>
 </project>

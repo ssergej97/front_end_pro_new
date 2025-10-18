@@ -9,6 +9,10 @@ const App = () => {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
   const [cityList, setCityList] = useState(null);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
 
   useEffect(() => {
@@ -16,7 +20,11 @@ const App = () => {
       fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1&language=uk`)
         .then(res => res.json())
         .then((result) => {
-          if (!result.results[0].name) return
+          if (!result.results) {
+            setShow(true);
+            return;
+          }
+          setShow(false);
           setCity(result.results[0].name)
           fetch(`https://api.open-meteo.com/v1/forecast?latitude=${result.results[0].latitude}&longitude=${result.results[0].longitude}&current_weather=true&daily=temperature_2m_max,temperature_2m_min&timezone=auto`)
             .then(res => res.json())
@@ -38,7 +46,7 @@ const App = () => {
             <SearchBar setCity={setCity}></SearchBar>
           </Col>
           <Col>
-            <WeatherCard city={city} weatherInfo={weather} setCityList={setCityList}></WeatherCard>
+            <WeatherCard show={show} handleClose={handleClose} handleShow={handleShow} city={city} weatherInfo={weather} setCityList={setCityList}></WeatherCard>
           </Col>
         </Row>
         <Row>
