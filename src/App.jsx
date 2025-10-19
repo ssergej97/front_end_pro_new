@@ -33,6 +33,8 @@ const App = () => {
     }
   }, [city]);
 
+
+
   return (
     <>
       <Container>
@@ -51,7 +53,7 @@ const App = () => {
         </Row>
         <Row>
           <Col>
-            <FavoritesList cityList={cityList} setCityList={setCityList}></FavoritesList>
+            <FavoritesList cityList={cityList} setCityList={setCityList} setCity={setCity}></FavoritesList>
           </Col>
         </Row>
       </Container>
