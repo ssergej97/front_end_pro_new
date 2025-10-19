@@ -17,7 +17,7 @@ const WeatherCard = ({weatherInfo, city, setCityList, show, handleClose, handleS
 
     const arrayOfCities = JSON.parse(localStorage.getItem("cities"));
     const copyCity = city;
-    const citiesObj = {id: arrayOfCities.at(-1).id + 1, name: copyCity}
+    const citiesObj = {id: `${arrayOfCities.at(-1)?.id ? Number(arrayOfCities.at(-1).id) + 1 : 1}`, name: copyCity}
     arrayOfCities.push(citiesObj);
     setCityList(arrayOfCities);
     localStorage.setItem("cities", JSON.stringify(arrayOfCities));
