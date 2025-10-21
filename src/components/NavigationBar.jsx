@@ -10,7 +10,7 @@ const NavigationBar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link as={Link} to="/">Main page</Nav.Link>
+                        <Nav.Link as={Link} to="/">Main Page</Nav.Link>
                         <Nav.Link as={Link} to="/task-detail">Task Detail</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

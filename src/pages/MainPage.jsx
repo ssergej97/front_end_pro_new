@@ -1,8 +1,8 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import AddTask from "../components/AddTask";
 import TaskList from "../components/TaskList";
+import { Row, Col } from 'react-bootstrap';
 
 const MainPage = () => {
     const navigate = useNavigate();
@@ -13,11 +13,14 @@ const MainPage = () => {
     };
 
     return (
-        <div>
-            <h1>Main page</h1>
+        <Row>
+          <Col>
             <AddTask></AddTask>
+          </Col>
+          <Col>
             <TaskList></TaskList>
-        </div>
+          </Col>
+        </Row>
     );
 };
 
