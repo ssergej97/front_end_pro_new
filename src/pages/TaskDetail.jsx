@@ -1,11 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import TaskInfo from "../components/TaskInfo";
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {Button, Table} from "react-bootstrap";
 
 const TaskDetail = () => {
     const {id} = useParams();
     const [task, setTask] = useState();
+    const navigate = useNavigate();
+
+    const handleNavigate = () => {
+        navigate("/");
+    };
 
     useEffect(() => {
         const tasks = JSON.parse(localStorage.getItem("tasks"));
@@ -33,10 +38,10 @@ const TaskDetail = () => {
                     <tbody>
                     <tr>
                         <td>{task.title}</td>
-                        <td>5 kg</td>
-                        <td>21.20.2025</td>
-                        <td>Active</td>
-                        <td><Button variant="dark" size="sm">Back to list</Button></td>
+                        <td>{task.description}</td>
+                        <td>{task.createdAt}</td>
+                        <td>{task.status}</td>
+                        <td><Button variant="dark" size="sm" onClick={handleNavigate}>Back to list</Button></td>
                     </tr>
                     </tbody>
                 </Table> : <p>No data</p>

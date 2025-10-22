@@ -6,9 +6,7 @@ import { Row, Col } from 'react-bootstrap';
 
 const MainPage = () => {
 
-    const [tasks, setTasks] = useState("");
-
-
+    const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")));
 
     return (
         <Row>
@@ -16,7 +14,7 @@ const MainPage = () => {
             <AddTask setTasks={setTasks}></AddTask>
           </Col>
           <Col>
-            <TaskList tasks={tasks}></TaskList>
+            <TaskList tasks={tasks} setTasks={setTasks}></TaskList>
           </Col>
         </Row>
     );
