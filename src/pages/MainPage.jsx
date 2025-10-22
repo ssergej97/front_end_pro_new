@@ -1,24 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import AddTask from "../components/AddTask";
 import TaskList from "../components/TaskList";
 import { Row, Col } from 'react-bootstrap';
 
 const MainPage = () => {
-    const navigate = useNavigate();
 
-    const handleNavigate = () => {
-        // Програмна навігація на сторінку TaskDetail
-        navigate('/task-detail');
-    };
+    const [tasks, setTasks] = useState("");
+
+
 
     return (
         <Row>
           <Col>
-            <AddTask></AddTask>
+            <AddTask setTasks={setTasks}></AddTask>
           </Col>
           <Col>
-            <TaskList></TaskList>
+            <TaskList tasks={tasks}></TaskList>
           </Col>
         </Row>
     );

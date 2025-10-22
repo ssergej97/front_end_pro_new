@@ -9,7 +9,7 @@ const AppRouter = () => {
             <MainLayout>
                 <Routes>
                     <Route path="/" element={<MainPage />} />
-                    <Route path="/task-detail" element={<TaskDetail />} />
+                    <Route path="/tasks/:id" element={<TaskDetail />} />
                 </Routes>
             </MainLayout>
         </Router>
