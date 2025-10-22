@@ -21,14 +21,15 @@ function TaskList({tasks, setTasks}) {
       event.stopPropagation();
       if (event.target.className === "form-check-input") {
           const tasks = JSON.parse(localStorage.getItem("tasks"));
-          const filteredTasks = tasks.map((task) => {
-              if (+task.id === +event.currentTarget.id) {
+          console.log(event.currentTarget.id)
+          tasks.forEach((task) => {
+              if (task.id === +event.currentTarget.id) {
                   if (task.status === "active") {
                       task.status = "completed";
                   } else task.status = "active";
               }
           })
-          localStorage.setItem("tasks", JSON.stringify(filteredTasks));
+          localStorage.setItem("tasks", JSON.stringify(tasks));
           setTasks(JSON.parse(localStorage.getItem("tasks")));
       }
   }
